@@ -5,7 +5,7 @@
 ## Project Page
 
 
-The XXXXXX panel details the disease type associate with the project, along with that type's primary site, number of cases associated with the project, number of genes with somatic mutations associated with the project, number of somatic mutations associated with the project, and links to XXXXXXXX.  The "Report" link  XXXXXXXXXX and the "Repository" link XXXXXXXXXXXX.  
+The Summary panel details the disease type associate with the project, along with that type's primary site, number of cases associated with the project, number of genes with somatic mutations associated with the project, number of somatic mutations associated with the project, and links to XXXXXXXX.  The "Report" link  XXXXXXXXXX and the "Repository" link XXXXXXXXXXXX.  
 
 ## Most Frequently Mutated Genes
 

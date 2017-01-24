@@ -45,6 +45,6 @@ A table is displayed below that lists information about each mutation including:
 * __Type:__ A general classification of the mutation
 * __Consequences:__ The amino acid change in the gene is displayed here
 * __# Affected Cases:__ The number of affected cases, expressed as the number per project and the number across all projects.
-* __Impact:__ A classification of the impact of this mutation based on the (XXXX Polyphen/ Sift Score XXXX) XXXXXfigure out more details about thisXXXXXX
+* __Impact:__ A classification of the biological impact of this mutation
 * __Annotations:__ Displays icons that link to the Cancer Hotspots and OncoKB resources for the mutation if available (XXX PROBABLY REMOVE THIS XXX)
 * __Survival Analysis:__ Choose the graph symbol to display a survival curve for cases that have this mutation.
