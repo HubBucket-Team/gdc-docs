@@ -6,6 +6,8 @@
 
 The Summary panel details the disease type associate with the project, along with that type's primary site and the number of cases, files, and annotations associated with the project.  Below the summary panel is a breakdown of the number of cases and files included in each experimental strategy and data category.  The pie chart icon at the top right of both of these panels will visually display this information in a pie chart.
 
+[![Project Summary](images/GDC-)](images/XXXXX.png "Click to see the full image.")
+
 ## Most Frequently Mutated Genes
 
 This bar graph and associated table displays the genes in which the most somatic mutations are observed. The table is dynamically generated based on the top mutated genes or the text that is entered into the search bar. , (XXXX DETAILS XXXXX) each gene row can be expanded to display the number of affected cases for each project.
@@ -19,7 +21,7 @@ This bar graph and associated table displays the genes in which the most somatic
 
 ### Survival Plot
 
-The most frequently mutated genes section also displays a survival plot. Survival percentage is displayed as a function of time and is displayed for cases with a mutated form of a certain gene and cases without a mutation. Initially the project-wide survival is shown. Choosing the 'Survival Analysis' icon from the row of the gene table will display the survival plot for that gene. 
+The most frequently mutated genes section also displays a survival plot. Survival percentage is displayed as a function of time and is displayed for cases with a mutated form of a certain gene and cases without a mutation. Initially the project-wide survival is shown. Choosing the 'Survival Analysis' icon from the row of the gene table will display the survival plot for that gene.
 
 ## OncoGrid
 

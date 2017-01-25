@@ -6,7 +6,7 @@ The gene entity page describes each gene with mutation data featured at the GDC 
 
 The summary section of the gene entity page contains the following information:
 
-[![GeneSummary](images/GDC-Gene-Summary.png)](images/GDC-Gene-Summary.png "Click to see the full image.")
+[![Gene Summary](images/GDC-Gene-Summary.png)](images/GDC-Gene-Summary.png "Click to see the full image.")
 
 * __Symbol:__ The gene symbol
 * __Name:__ Full name of the gene
@@ -22,11 +22,14 @@ A list with links that lead to external databases with additional information ab
 
 ## Cancer Distribution
 
-(XXXX PICTURE OF THE BAR GRAPH XXXX)
+[![Cancer Distribution](images/GDC-Gene-CancerDist.png)](images/GDC-Gene-CancerDist.png "Click to see the full image.")
 
 A table is displayed that shows how many cases are affected by mutations within the gene. Each row represents the number of cases for each project.
 
 ## Protein Plot
+
+[![Protein Plot](images/GDC-Gene-ProteinGraph.png)](images/GDC-Gene-ProteinGraph.png "Click to see the full image.")
+
 Mutations and their frequency across cases are mapped to a graphical visualization of protein-coding regions with a lollipop plot. Pfam domains are highlighted along the x-axis to assign functionality to specific protein-coding regions. The bottom track represents a view of the full gene length. Different transcripts can be selected by using the drop-down menu above the plot.  
 
 The panel to the right of the plot allows the plot to be filtered by mutation consequence or impact.  The plot will dynamically change as filters are applied.  Mutation consequence and impact is denoted in the plot by color.
@@ -37,7 +40,7 @@ The plot can be viewed at different zoom levels by clicking and dragging across 
 
 The ten most frequent mutations in the gene are displayed as a bar graph that indicates the number of cases that share each mutation.  
 
-XXXX BARGRAPH PICTURE GOES HERE XXXXX
+[![Gene MFM](images/GDC-Gene-MFM.png)](images/GDC-Gene-MFM.png "Click to see the full image.")
 
 A table is displayed below that lists information about each mutation including:
 
