@@ -24,9 +24,9 @@ A list with links that lead to external databases with additional information ab
 
 [![Cancer Distribution](images/GDC-Gene-CancerDist.png)](images/GDC-Gene-CancerDist.png "Click to see the full image.")
 
-A table is displayed that shows how many cases are affected by mutations within the gene. Each row represents the number of cases for each project.
+A table is displayed that shows how many cases are affected by mutations within the gene as a ratio and percentage. Each row represents the number of cases for each project.
 
-## Protein Plot
+## Protein Viewer
 
 [![Protein Plot](images/GDC-Gene-ProteinGraph.png)](images/GDC-Gene-ProteinGraph.png "Click to see the full image.")
 
@@ -47,7 +47,5 @@ A table is displayed below that lists information about each mutation including:
 * __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference genome and tumor sample.  
 * __Type:__ A general classification of the mutation
 * __Consequences:__ The amino acid change in the gene is displayed here
-* __# Affected Cases:__ The number of affected cases, expressed as the number per project and the number across all projects.
+* __# Affected Cases:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
 * __Impact:__ A classification of the biological impact of this mutation
-* __Annotations:__ Displays icons that link to the Cancer Hotspots and OncoKB resources for the mutation if available (XXX PROBABLY REMOVE THIS XXX)
-* __Survival Analysis:__ Choose the graph symbol to display a survival curve for cases that have this mutation.
