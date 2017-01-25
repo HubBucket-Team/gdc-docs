@@ -4,6 +4,8 @@ The mutation entity page contains information about a particular mutation and ho
 
 ### Summary
 
+[![Mutation Summary](images/GDC-Mutation-Summary.png)](images/GDC-Mutation-Summary.png "Click to see the full image.")
+
 * __ID:__ A unique identifier for the mutation
 * __DNA Change:__ Denotes the chromosome number, position, and nucleotide change of the mutation
 * __Type:__ A broad categorization of the mutation
@@ -17,6 +19,8 @@ A separate panel contains links to information about the mutation in external da
 
 ### Consequences
 
+[![Mutation Consequences](images/GDC-Mutation-Consequences.png)](images/GDC-Mutation-Consequences.png "Click to see the full image.")
+
 The consequences of each mutation are displayed in a table, which can be exported as a (XXXXX TSV or) JSON object. The fields that detail each mutation are listed below:
 
 * __Gene:__ The symbol for the affected gene
@@ -28,7 +32,9 @@ The consequences of each mutation are displayed in a table, which can be exporte
 
 ### Cancer Distribution
 
-A bar graph detailing the number of cases affected by the mutation across all projects is generated dynamically and can be exported as an image (SVG).  Below the graph is a table with information about how the mutation affects each project, which can be exported as a JSON object. The table contains the following fields:
+[![Mutation Distribution](images/GDC-Mutation-CancerDist.png)](images/GDC-Mutation-CancerDist.png "Click to see the full image.")
+
+A bar graph detailing the number of cases affected by the mutation across all projects is generated dynamically.  Below the graph is a table with information about how the mutation affects each project, which can be exported as a JSON object. The table contains the following fields:
 
 * __Project ID__: The ID for a specific project
 * __Disease__: The disease associated with the project
