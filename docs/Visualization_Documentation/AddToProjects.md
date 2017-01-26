@@ -17,10 +17,10 @@ This bar graph and associated table displays the genes in which the most somatic
 * __Symbol:__ The symbol for the gene
 * __Cytoband:__ The location of the mutation on the chromosome in terms of Giemsa-stained samples.
 * __# Affected Cases:__ The number of affected cases for this project is displayed in the first column. The second column displays the number of affected cases across all projects and can be expanded for a project-level breakdown of affected cases by clicking on the red arrow. The number of affected cases is displayed as a ratio and percentage of the total number of cases on both levels.
-* __# of Mutations:__ The number of somatic mutations detected in that gene (XXXX for the project, or across all projects XXX)
+* __# of Mutations:__ The number of somatic mutations detected in that gene
 * __Survival Analysis:__ This displays an additional curve for the gene in the survival plot (mutated vs. unmutated)
 
-[![Project MFM Gene](images/GDC-Project-MFM-Gene.png.png)](images/GDC-Project-MFM-Gene.png "Click to see the full image.")
+[![Project MFM Gene](images/GDC-Project-MFM-Gene.png)](images/GDC-Project-MFM-Gene.png "Click to see the full image.")
 
 ### Survival Plot
 
@@ -30,7 +30,7 @@ The most frequently mutated genes section also displays a survival plot. Surviva
 
 An OncoGrid graphic is generated for each project and displayed on its entity page.  
 
-[![Project Oncogrid](images/GDC-Project-Oncogrid.png](images/GDC-Project-Oncogrid.png "Click to see the full image.")
+[![Project Oncogrid](images/GDC-Project-Oncogrid.png)](images/GDC-Project-Oncogrid.png "Click to see the full image.")
 
 ### Interpreting OncoGrid
 
