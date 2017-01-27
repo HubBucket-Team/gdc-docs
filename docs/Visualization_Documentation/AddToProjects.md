@@ -1,8 +1,4 @@
-### ADD THIS TO THE END OF THE PROJECTS PAGE DOCUMENTATION
-
-(New Features)
-
-## Project Page
+# Project Page
 
 [![Project Summary](images/GDC-Project-Summary.png)](images/GDC-Project-Summary.png "Click to see the full image.")
 
@@ -12,7 +8,7 @@ The Summary panel details the disease type associate with the project, along wit
 
 ## Most Frequently Mutated Genes
 
-This bar graph and associated table displays the genes in which the most somatic mutations are observed. The table is dynamically generated based on the top mutated genes or the text that is entered into the search bar. , (XXXX DETAILS XXXXX) each gene row can be expanded to display the number of affected cases for each project.
+This bar graph and associated table displays the genes in which the most somatic mutations are observed. The table is dynamically generated based on the top mutated genes or the text that is entered into the search bar. Each gene row can be expanded to display the number of affected cases for each project.
 
 * __Symbol:__ The symbol for the gene
 * __Cytoband:__ The location of the mutation on the chromosome in terms of Giemsa-stained samples.
@@ -56,7 +52,7 @@ This bar graph and associated table displays the distribution of mutations that 
 [![Project MFM Mutation](images/GDC-Project-MFM-Mut.png)](images/GDC-Project-MFM-Mut.png "Click to see the full image.")
 
 * __DNA Change:__ The specific nucleotide change, chromosome, and position of the mutation
-* __Type:__ A general classification of the mutation. Includes: XXXX, XXXX, XXXX, and XXXX
+* __Type:__ A general classification of the mutation
 * __Consequences:__ The biological consequences of each mutation
 * __# Affected Cases:__ The number of affected cases for this project is displayed in the first column. The second column displays the number of affected cases across all projects and can be expanded for a project-level breakdown of affected cases by clicking on the red arrow. The number of affected cases is displayed as a ratio and percentage of the total number of cases on both levels.
 * __Impact:__ The biological impact of each mutation.
