@@ -70,7 +70,7 @@ pages:
   - "Bioinformatics Pipeline: miRNA Analysis": 'Data/Bioinformatics_Pipelines/miRNA_Pipeline.md'
   - "Bioinformatics Pipeline: Copy Number Variation Analysis": 'Data/Bioinformatics_Pipelines/CNV_Pipeline.md'
   - "Bioinformatics Pipeline: Methylation Liftover Pipeline": 'Data/Bioinformatics_Pipelines/Methylation_LO_Pipeline.md'
-  - "VIZ": 'Vizualization_Documentation/GeneEntity.md'
+  - "VIZ": 'Visualization_Documentation/GeneEntity.md'
   - "Release Notes": 'Data/Release_Notes/Data_Release_Notes.md'
   - fa-file-text Download PDF /Data/PDF/Data_UG.pdf: 'Data/PDF/index.md'
 extra:
