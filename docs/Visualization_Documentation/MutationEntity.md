@@ -6,7 +6,7 @@ The mutation entity page contains information about a particular mutation and ho
 
 [![Mutation Summary](images/GDC-Mutation-Summary.png)](images/GDC-Mutation-Summary.png "Click to see the full image.")
 
-* __ID:__ A unique identifier (UUID) for the mutation
+* __ID:__ A unique identifier (UUID) for this mutation
 * __DNA Change:__ Denotes the chromosome number, position, and nucleotide change of the mutation
 * __Type:__ A broad categorization of the mutation
 * __Reference Genome Assembly:__ The reference genome in which the chromosomal position refers to
