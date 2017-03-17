@@ -73,3 +73,22 @@ A table is displayed below that lists information about each mutation including:
 * __# Affected Cases in GDC:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
 * __Impact:__ A classification of the biological impact of this mutation
 * __Survival Analysis:__ An icon that when clicked, will plot the survival rate between the gene's mutated and non-mutated cases
+
+### Most Affected Cases
+
+The final section of the project entity page, is a display of the top 20 cases in a specified project, with the most affected genes.
+
+[![Most Affected Cases](images/gdc-most-affected-cases.png)](images/gdc-most-affected-cases.png "Click to see the full image.")
+
+Below the bar graph, a table contains information about these cases:
+
+* __UUID:__ The UUID of the case, which directs the user to the [Case Detail Page](docs/Data_Portal/Users_Guide/Cases_and_Files.md#case-detail-page)
+* __Site:__ The primary site affected  
+* __Gender:__ The gender of the case
+* __Age at Diagnosis:__ Age at the time of diagnosis expressed in number of days since birth.
+* __Stage:__ The extent of a cancer in the body.
+* __Survival:__ The survival state of the person
+* __Last Follow Up:__ Time interval from the date of last follow up to the date of initial pathologic diagnosis, represented as a calculated number of days
+* __Available Files per Data Category:__ The number of files available for each category.  These link to the files for the specific case.
+* __Mutations:__ The number of mutations for the case.
+* __Genes:__ The number of genes affected by mutations for the case.

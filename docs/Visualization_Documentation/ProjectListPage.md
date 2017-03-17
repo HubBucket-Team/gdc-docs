@@ -1,6 +1,6 @@
 # Project List Page
 
-The [Project List](https://gdc-portal.nci.nih.gov/projects/) page displays statistics about the projects that are available at the GDC.  
+The Project List page displays statistics about the projects that are available at the GDC.  
 
 [![Project List Graphs](images/GDC-PL-Graphs.png)](images/GDC-PL-Graphs.png "Click to see the full image.")
 
