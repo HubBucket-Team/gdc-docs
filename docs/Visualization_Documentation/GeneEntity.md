@@ -46,6 +46,9 @@ A table is displayed below that lists information about each mutation including:
 
 * __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference genome and tumor sample.  
 * __Type:__ A general classification of the mutation
-* __Consequences:__ The amino acid change in the gene is displayed here
+* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the [Gene Entity Page](GeneEntity.md) for the gene affected by the mutation is included
 * __# Affected Cases:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
-* __Impact:__ A classification of the biological impact of this mutation
+* __Impact:__ A subjective classification of the severity of the variant consequence. The four categories are:
+  * __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.
+  * __MODERATE__: A non-disruptive variant that might change protein effectiveness.
+  * __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior.
