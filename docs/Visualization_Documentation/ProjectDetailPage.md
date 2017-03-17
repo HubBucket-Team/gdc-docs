@@ -20,7 +20,7 @@ The top of this section contains a plot of the most frequently mutated genes and
 
 Below these graphs is a tabular view of the genes affected which includes the following information:
 
-* __Symbol:__ The gene symbol, when clicked, brings up the [Gene Entity Page](GeneEntity.md)
+* __Symbol:__ The gene symbol when clicked, brings up the [Gene Entity Page](GeneEntity.md)
 * __Name:__ Full name of the gene
 * __Cytoband:__ The gene's cytoband notation
 * __# Affected Cases in Project:__ The number of cases within the specified project that contain a mutation on this gene
