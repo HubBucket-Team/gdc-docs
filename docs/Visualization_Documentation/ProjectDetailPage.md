@@ -28,6 +28,31 @@ Below these graphs is a tabular view of the genes affected, which includes the f
 * __# Mutations:__ The number of SSMs in the gene
 * __Survival Analysis:__ An icon that when clicked, will plot the survival rate between the gene's mutated and non-mutated cases
 
+#### Survival Analysis
+
+Survival analysis is used to analyze the occurrence of event data over time.  In the GDC, survival analysis is done on the mortality of the cases.  Survival analysts requires:
+*  Data on the time to a particular event (days from diagnosis to death)
+*  Information on whether the event has occurred (alive/deceased)
+*  Data split into different categories or groups (i.e. gender)
+
+The survival analysis in the GDC uses a Kaplan-Meier estimator:
+
+[![Kaplan-Meier Estimator](images/gdc-kaplan-meier-estimator.png)](images/gdc-kaplan-meier-estimator "Click to see the full image.")
+
+Where:
+ * S(ti) is the estimated survival probability for any particular one of the t time periods
+ * ni is the number of subjects at risk at the beginning of time period ti
+ * and di is the number of subjects who die during time period ti
+
+The table below is an example data set to calculate survival for a set of 7 cases:
+
+[![Sample Survival Analysis Table](images/gdc-sample-survival-table.png)](images/gdc-sample-survival-table.png "Click to see the full image.")
+
+The calculated cumulated survival probability can be plotted against the interval to obtain a survival plot like the one shown below.
+
+[![Sample Survival Analysis Plot](images/gdc-survival-plot.png)](images/gdc-survival-plot.png "Click to see the full image.")
+
+
 ### OncoGrid
 
 The project detail page includes an OncoGrid plot of all the cases for the specific project, for the top 50 mutated genes affected by high impact mutations.  Genes displayed on the left of the grid (Y-axis) correspond to individual patient cases on the bottom of the grid (X-axis).  
