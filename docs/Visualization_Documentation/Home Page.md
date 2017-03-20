@@ -6,7 +6,7 @@ The [GDC Portal](https://gdc-portal-staging.datacommons.io) home page is the ent
 
 Data within the Genomic Data Commons is organized by project based on a primary site (i.e Brain), though can be narrowed down in a few ways listed below.
 
-* [__Projects__](ProjectListPage.md): The projects link directs users to the [projects list page](docs/Visualization_Documentation/ProjectListPage.md), listing project-level information.
+* __Projects__: The projects link directs users to the [Projects List Page](ProjectListPage.md), listing project-level information.
 
 * __Repository__: The repository link allows users to see all data contained in the GDC and apply file/case filters to narrow down their search.
 
