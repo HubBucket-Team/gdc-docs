@@ -18,4 +18,4 @@ A pie graph displays the relative number of cases for each primary site (inner c
 
 [![Project Table](images/GDC-PL-Table.png)](images/GDC-PL-Table.png "Click to see the full image.")
 
-General information about each of the projects is displayed below the graphs. The numbers of available cases per data category for each project are displayed as links. Clicking on a specific project will bring a user to that project's [Project Detail Page](docs/Visualization_Documentation/ProjectDetailPage.md), which provides an overview of all cases, files and annotations available for the project
+General information about each of the projects is displayed below the graphs. The numbers of available cases per data category for each project are displayed as links. Clicking on a specific project will bring a user to that project's [Project Detail Page](ProjectDetailPage.md), which provides an overview of all cases, files and annotations available for the project
