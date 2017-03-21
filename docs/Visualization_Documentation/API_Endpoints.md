@@ -20,7 +20,6 @@ __Example 1:__ A user would like to access information about the gene `ZMPSTE24`
 ```Shell
 curl "https://gdc-api-staging.datacommons.io/genes/ENSG00000084073?pretty=true"
 ```
-
 ```Response
 {
   "data": {
@@ -52,8 +51,37 @@ curl "https://gdc-api-staging.datacommons.io/genes/ENSG00000084073?pretty=true"
 
 __Example 2:__ A user wants a list of coordinates for all genes on chromosome 7. The query can be filtered for only results from chromosome 7 using a JSON-formatted query that is URL-encoded.
 
-```
+```Shell
 curl "https://gdc-api-staging.datacommons.io/genes?pretty=true&fields=gene_id,symbol,gene_start,gene_end&format=tsv&size=2000&filters=%7B%0D%0A%22op%22%3A%22in%22%2C%0D%0A%22content%22%3A%7B%0D%0A%22field%22%3A%22gene_chromosome%22%2C%0D%0A%22value%22%3A%5B%0D%0A%227%22%0D%0A%5D%0D%0A%7D%0D%0A%7D"
+```
+```Response
+gene_start      gene_end        symbol  id
+28995231        29195451        CPVL    ENSG00000106066
+33014114        33062797        NT5C3A  ENSG00000122643
+143052320       143053347       OR6V1   ENSG00000225781
+100400826       100428992       ZCWPW1  ENSG00000078487
+73861159        73865893        WBSCR28 ENSG00000175877
+64862999        64864370        EEF1DP4 ENSG00000213640
+159231435       159233377       PIP5K1P2        ENSG00000229435
+141972631       141973773       TAS2R38 ENSG00000257138
+16646131        16706523        BZW2    ENSG00000136261
+149239651       149255609       ZNF212  ENSG00000170260
+57405025        57405090        MIR3147 ENSG00000266168
+130393771       130442433       CEP41   ENSG00000106477
+150800403       150805120       TMEM176A        ENSG00000002933
+93591573        93911265        GNGT1   ENSG00000127928
+117465784       117715971       CFTR    ENSG00000001626
+5879827 5886362 OCM     ENSG00000122543
+144118461       144119360       OR2A15P ENSG00000239981
+30424527        30478784        NOD1    ENSG00000106100
+137227341       137343865       PTN     ENSG00000105894
+84876554        84876956        HMGN2P11        ENSG00000232605
+107470018       107475659       GPR22   ENSG00000172209
+31330711        31330896        RP11-463M14.1   ENSG00000271027
+78017057        79453574        MAGI2   ENSG00000187391
+55736779        55739605        CICP11  ENSG00000237799
+142111749       142222324       RP11-1220K2.2   ENSG00000257743
+(truncated)
 ```
 
 __Example 3:__ A user wants to calculate which chromosome has the greatest number of ssms in case `TCGA-DU-6407`.  Because this relates to the mutations observed in a case, the `ssm_occurrences` endpoint is used.
@@ -102,7 +130,8 @@ In addition the three endpoints mentioned previously, several `analysis` endpoin
 * __analysis/mutated_cases_count_by_project__
 
 __Example 1:__  This gives the number of cases with a mutation in each gene listed in the `gene_ids` parameter.  Note that this endpoint cannot be used with the `format` or `fields` parameters.
-```
+
+```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/top_cases_counts_by_genes?gene_ids=ENSG00000155657&pretty=true"
 ```
 
@@ -137,7 +166,7 @@ __Example 2:__ The following demonstrates a use of the `analysis/top_mutated_gen
 ```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/top_mutated_genes_by_project?fields=gene_id,symbol&filters=%7B%22op%22%3A%22AND%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22case.project.project_id%22%2C%22value%22%3A%5B%22TCGA-DLBC%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22case.ssm.consequence.transcript.annotation.impact%22%2C%22value%22%3A%5B%22HIGH%22%2C%22MODERATE%22%5D%7D%7D%5D%7D"
 ```
-```
+```Response
 {
   "data": {
     "hits": [
@@ -208,17 +237,120 @@ curl "https://gdc-api-staging.datacommons.io/analysis/top_mutated_genes_by_proje
 
 __Example 3:__ The `analysis/top_mutated_cases_by_gene` endpoint will generate information about the cases that are most affected by mutations in a given number of genes.  Below, the file count for each category is given for the cases most affected by mutations in these 50 genes.
 
-```
+```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/top_mutated_cases_by_gene?fields=diagnoses.days_to_death,diagnoses.age_at_diagnosis,diagnoses.vital_status,diagnoses.primary_diagnosis,demographic.gender,demographic.race,demographic.ethnicity,case_id,summary.data_categories.file_count,summary.data_categories.data_category&filters=%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%22TCGA-DLBC%22%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22genes.gene_id%22%2C%22value%22%3A%5B%22ENSG00000166710%22%2C%22ENSG00000005339%22%2C%22ENSG00000083857%22%2C%22ENSG00000168769%22%2C%22ENSG00000100906%22%2C%22ENSG00000184677%22%2C%22ENSG00000101680%22%2C%22ENSG00000101266%22%2C%22ENSG00000028277%22%2C%22ENSG00000140968%22%2C%22ENSG00000181827%22%2C%22ENSG00000116815%22%2C%22ENSG00000275221%22%2C%22ENSG00000139083%22%2C%22ENSG00000112851%22%2C%22ENSG00000112697%22%2C%22ENSG00000164134%22%2C%22ENSG00000009413%22%2C%22ENSG00000071626%22%2C%22ENSG00000135407%22%2C%22ENSG00000101825%22%2C%22ENSG00000104814%22%2C%22ENSG00000166415%22%2C%22ENSG00000142867%22%2C%22ENSG00000254585%22%2C%22ENSG00000139718%22%2C%22ENSG00000077721%22%2C%22ENSG00000130294%22%2C%22ENSG00000117245%22%2C%22ENSG00000117318%22%2C%22ENSG00000270550%22%2C%22ENSG00000163637%22%2C%22ENSG00000166575%22%2C%22ENSG00000065526%22%2C%22ENSG00000156453%22%2C%22ENSG00000128191%22%2C%22ENSG00000055609%22%2C%22ENSG00000204469%22%2C%22ENSG00000187605%22%2C%22ENSG00000185875%22%2C%22ENSG00000110888%22%2C%22ENSG00000007341%22%2C%22ENSG00000173198%22%2C%22ENSG00000115568%22%2C%22ENSG00000163714%22%2C%22ENSG00000125772%22%2C%22ENSG00000080815%22%2C%22ENSG00000189079%22%2C%22ENSG00000120837%22%2C%22ENSG00000143951%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22ssms.consequence.transcript.annotation.impact%22%2C%22value%22%3A%5B%22HIGH%22%5D%7D%7D%5D%7D&pretty=true&size=50"
 ```
-
-
-__Example 4:__  The `analysis/mutated_cases_count_by_project` endpoint will produce counts for the number of cases with associated ssm data in each project.
-
+```Response
+{
+  "data": {
+    "hits": [
+      {
+        "_score": 12.0,
+        "diagnoses": [
+          {
+            "days_to_death": null,
+            "vital_status": "alive",
+            "age_at_diagnosis": 18691,
+            "primary_diagnosis": "c83.3"
+          }
+        ],
+        "case_id": "eda9496e-be80-4a13-bf06-89f0cc9e937f",
+        "demographic": {
+          "gender": "male",
+          "race": "white",
+          "ethnicity": "hispanic or latino"
+        },
+        "summary": {
+          "data_categories": [
+            {
+              "file_count": 1,
+              "data_category": "DNA Methylation"
+            },
+            {
+              "file_count": 1,
+              "data_category": "Clinical"
+            },
+            {
+              "file_count": 5,
+              "data_category": "Transcriptome Profiling"
+            },
+            {
+              "file_count": 16,
+              "data_category": "Simple Nucleotide Variation"
+            },
+            {
+              "file_count": 4,
+              "data_category": "Raw Sequencing Data"
+            },
+            {
+              "file_count": 4,
+              "data_category": "Copy Number Variation"
+            },
+            {
+              "file_count": 1,
+              "data_category": "Biospecimen"
+            }
+          ]
+        }
+      },
+      {
+        "_score": 9.0,
+        "diagnoses": [
+          {
+            "days_to_death": null,
+            "vital_status": "alive",
+            "age_at_diagnosis": 20812,
+            "primary_diagnosis": "c83.3"
+          }
+        ],
+        "case_id": "7a589441-11ef-4158-87e7-3951d86bc2aa",
+        "demographic": {
+          "gender": "female",
+          "race": "white",
+          "ethnicity": "not hispanic or latino"
+        },
+        "summary": {
+          "data_categories": [
+            {
+              "file_count": 1,
+              "data_category": "DNA Methylation"
+            },
+            {
+              "file_count": 1,
+              "data_category": "Clinical"
+            },
+            {
+              "file_count": 3,
+              "data_category": "Transcriptome Profiling"
+            },
+            {
+              "file_count": 16,
+              "data_category": "Simple Nucleotide Variation"
+            },
+            {
+              "file_count": 3,
+              "data_category": "Raw Sequencing Data"
+            },
+            {
+              "file_count": 4,
+              "data_category": "Copy Number Variation"
+            },
+            {
+              "file_count": 1,
+              "data_category": "Biospecimen"
+            }
+          ]
+        }
+      },
+(truncated)
 ```
+
+__Example 4:__  The `analysis/mutated_cases_count_by_project` endpoint produces counts for the number of cases that have associated ssm data in each project.
+
+```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/mutated_cases_count_by_project?size=0&pretty=true"
 ```
-```
+```Response
 {
   "hits": {
     "hits": [],
@@ -331,7 +463,7 @@ curl "https://gdc-api-staging.datacommons.io/analysis/mutated_cases_count_by_pro
 ```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/survival?filters=%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%22TCGA-DLBC%22%7D%7D%5D&pretty=true"
 ```
-```json
+```Response
 {
   "overallStats": {},
   "results": [
