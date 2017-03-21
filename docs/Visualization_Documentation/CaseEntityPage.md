@@ -1,24 +1,24 @@
-## Case Detail Page
+# Case Entity Page
 
-The Case Detail page displays case details including the project and disease information, data files that are available for that case, and the experimental strategies employed. A button in the top-right corner of the page allows the user to add all files associated with the case to the file cart.
+The Case Entity page displays case details including the project and disease information, data files that are available for that case, and the experimental strategies employed. A button in the top-right corner of the page allows the user to add all files associated with the case to the file cart.
 
-[![Case Detail Page](images/gdc-case-entity-page.png)](images/gdc-case-entity-page.png "Click to see the full image.")
+[![Case Entity Page](images/gdc-case-entity-page.png)](images/gdc-case-entity-page.png "Click to see the full image.")
 
-### Clinical and Biospecimen Information
+## Clinical and Biospecimen Information
 
 The page also provides clinical information about that case, and information about any biospecimens collected from the case. Links to export clinical and biospecimen information in JSON format are provided.
 
-[![Case Detail Page, Clinical and Biospecimen](images/gdc-case-clinical-biospecimen.png)](images/gdc-case-clinical-biospecimen.png "Click to see the full image.")
+[![Case Entity Page, Clinical and Biospecimen](images/gdc-case-clinical-biospecimen.png)](images/gdc-case-clinical-biospecimen.png "Click to see the full image.")
 
 For clinical records that support multiple records of the same type (Diagnoses, Family Histories, or Exposures), a UUID of the record is provided on the left hand side of the corresponding tab, allowing the user to select the entry of interest:
 
-#### Biospecimen Search
+### Biospecimen Search
 
 A search filter just below the biospecimen section can be used to find and filter biospecimen samples taken.  The wildcard search will highlight entities in the tree that match the characters typed.  This will search both the case submitter ID, as well as the additional metadata for each entity.  For example, searching 'Primary Tumor' will highlight samples that match that criteria.
 
 [![Biospecimen Search](images/gdc-case-biospecimen-search.png)](images/gdc-case-biospecimen-search.png "Click to see the full image.")
 
-### Most Frequent Mutations
+## Most Frequent Mutations
 
 The case entity page will also display the most frequent mutations in the case.  It is displayed as a bar graph that indicates the number of cases that share each mutation and in a tabular format below.  
 

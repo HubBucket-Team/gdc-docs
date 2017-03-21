@@ -1,8 +1,8 @@
-## Mutation Entity Page
+# Mutation Entity Page
 
 The mutation entity page contains information about a particular mutation and how it affects the associated gene. Each mutation is identified by its chromosomal position and nucleotide-level change.
 
-### Summary
+## Summary
 
 [![Mutation Summary](images/GDC-Mutation-Summary.png)](images/GDC-Mutation-Summary.png "Click to see the full image.")
 
@@ -11,13 +11,16 @@ The mutation entity page contains information about a particular mutation and ho
 * __Type:__ A broad categorization of the mutation
 * __Reference Genome Assembly:__ The reference genome in which the chromosomal position refers to
 * __Allele in the Reference Assembly:__ The nucleotide(s) that compose the site in the reference assembly
-* __Functional Impact:__ The biological effects of the mutation
+* __Functional Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
+  * __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.
+  * __MODERATE__: A non-disruptive variant that might change protein effectiveness.
+  * __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior.
 
-#### External References
+### External References
 
 A separate panel contains links to information about the gene that the mutation effects in external databases. These databases include: [Entrez](https://www.ncbi.nlm.nih.gov/gquery/), [Hugo Gene Nomenclature Committee](http://www.genenames.org/), [Online Mendelian Inheritance in Man](https://www.omim.org/), and [Uniprotkb SwissProt](http://www.uniprot.org/).
 
-### Consequences
+## Consequences
 
 [![Mutation Consequences](images/GDC-Mutation-Consequences.png)](images/GDC-Mutation-Consequences.png "Click to see the full image.")
 
@@ -30,7 +33,7 @@ The consequences of the mutation are displayed in a table. The fields that detai
 * __Strand:__ If the gene is located on the forward (+) or reverse (-) strand
 * __Transcript(s):__ The transcript(s) affected by the mutation. Each contains a link to the [Ensembl](https://www.ensembl.org) entry for the transcript.     
 
-### Cancer Distribution
+## Cancer Distribution
 
 [![Mutation Distribution](images/GDC-Mutation-CancerDist.png)](images/GDC-Mutation-CancerDist.png "Click to see the full image.")
 
@@ -41,7 +44,7 @@ A bar graph detailing the number of cases affected by the mutation across all pr
 * __Site__: The anatomical site affected by the disease
 * __# Affected Cases__: The number of affected cases and total number of cases displayed as a fraction and percentage
 
-### Protein Viewer
+## Protein Viewer
 
 [![Mutation Protein Graph](images/GDC-Mutation-ProteinGraph.png)](images/GDC-Mutation-ProteinGraph.png "Click to see the full image.")
 

@@ -1,4 +1,4 @@
-## Project Detail Page
+# Project Detail Page
 
 Each project has its own detail page that provides an overview of all cases, files and annotations available for the project. Clicking on the numbers in the summary table will display the corresponding data.
 
@@ -10,9 +10,9 @@ Three download buttons in the top right corner of the screen allow the user to d
 * __Download Clinical__: Download clinical metadata about all cases in the project.
 * __Download Biospecimen__: Download metadata about all biospecimen available in the project.
 
-### Most Frequently Mutated Genes
+## Most Frequently Mutated Genes
 
-The project detail page also displays information about the most frequently mutated genes in a graphical and tabular format.
+The project detail page also displays the genes in which the most somatic mutations are observed in a graphical and tabular format.
 
 [![Frequently Mutated Genes](images/gdc-frequently-mutated-genes.png)](images/gdc-frequently-mutated-genes.png "Click to see the full image.")
 
@@ -22,13 +22,13 @@ Below these graphs is a tabular view of the genes affected which includes the fo
 
 * __Symbol:__ The gene symbol when clicked, brings up the [Gene Entity Page](GeneEntity.md)
 * __Name:__ Full name of the gene
-* __Cytoband:__ The gene's cytoband notation
+* __Cytoband:__ The location of the mutation on the chromosome in terms of Giemsa-stained samples.
 * __# Affected Cases in Project:__ The number of cases within the specified project that contain a mutation on this gene
 * __# Affected Cases in GDC:__ The number of cases within all the projects in the GDC that contain a mutation on this gene
-* __# Mutations:__ The number of SSMs in the gene
+* __# Mutations:__ The number of SSMs (somatic mutations detected in that gene)
 * __Survival Analysis:__ An icon that when clicked, will plot the survival rate between the gene's mutated and non-mutated cases in the survival plot above
 
-#### Survival Analysis
+### Survival Analysis
 
 Survival analysis is used to analyze the occurrence of event data over time.  In the GDC, survival analysis is done on the mortality of the cases.  Survival analysts requires:
 *  Data on the time to a particular event (days from diagnosis to death)
@@ -53,7 +53,7 @@ The calculated cumulated survival probability can be plotted against the interva
 [![Sample Survival Analysis Plot](images/gdc-survival-plot.png)](images/gdc-survival-plot.png "Click to see the full image.")
 
 
-### OncoGrid
+## OncoGrid
 
 The project detail page includes an OncoGrid plot of all the cases for the specific project, for the top 50 mutated genes affected by high impact mutations.  Genes displayed on the left of the grid (Y-axis) correspond to individual patient cases on the bottom of the grid (X-axis).  
 
@@ -68,21 +68,22 @@ The right side of the grid displays additional information about the genes under
 * __Gene Sets:__ Describes whether a gene is part of the Gene Census.  (The cancer Gene Census is an ongoing effort to catalogue those genes for which mutations have been causally implicated in cancer)
 * __GDC:__ Heat-map of all cases in the GDC affected with a mutation in this gene
 
-#### OncoGrid Options
+### OncoGrid Options
 
-In the top right corner of the OncoGrid, a number of options are available:
+To facilitate readability and comparisons, drag-and-drop can be used to reorder the gene rows.  Double clicking a row in the "# Cases Affected" bar at the right side of the graphic will bring the user to the respective [Gene Entity](GeneEntity.md) page. Hovering over a cell will display information about the mutation such as its ID and biological consequence. Clicking on the cell will bring the user to the respective [Mutation Entity](MutationEntity.md) page.  
+
+A tool bar at the top right of the graphic allows the user to export the data as a JSON object, PNG image, or SVG image.  Seven buttons are available in this toolbar:
 
 * __Download:__ Users can choose to export the contents either to a static image file (PNG or SVG format) or the underlying data in JSON format
-* __Refresh:__ Reloads the OncoGrid
-* __Cluster Data:__ ????
-* __Toggle Heatmap:__ This toggles view of the grid, to show a heat-map of the frequency of mutations
+* __Refresh:__ Sets all OncoGrid rows, columns, and zoom levels back to their initial positions
+* __Cluster Data:__ Clusters the rows and columns to place mutated genes with the same cases and cases with the same mutated genes together
+* __Toggle Heatmap:__ The view can be toggled between cells representing mutation consequences or number of mutations in each gene
 * __Toggle Gridlines:__ Turn the gridlines on and off
 * __Toggle Crosshairs:__ Turns crosshairs on, so that users can zoom into specific sections of the OncoGrid
 * __Fullscreen:__ Turns Fullscreen mode on/off
 
-### Most Frequent Mutations
-
-The ten most frequent mutations in the gene are displayed as a bar graph that indicates the number of cases that share each mutation.  
+## Most Frequent Mutations
+The project detail page also displays the ten most frequent mutations as a bar graph that indicates the number of cases that share each mutation.  
 
 [![Most Frequent Mutations](images/gdc-frequent-mutations.png)](images/gdc-frequent-mutations.png "Click to see the full image.")
 
@@ -102,7 +103,7 @@ A table is displayed below that lists information about each mutation including:
   * __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior.
 * __Survival Analysis:__ An icon that when clicked, will plot the survival rate between the gene's mutated and non-mutated cases
 
-### Most Affected Cases
+## Most Affected Cases
 
 The final section of the project entity page is a display of the top 20 cases in a specified project, with the most affected genes.
 
@@ -110,13 +111,13 @@ The final section of the project entity page is a display of the top 20 cases in
 
 Below the bar graph, a table contains information about these cases:
 
-* __UUID:__ The UUID of the case, which directs the user to the [Case Detail Page](docs/Data_Portal/Users_Guide/Cases_and_Files.md#case-detail-page)
-* __Site:__  The primary site affected  
-* __Gender:__ The gender of the case
-* __Age at Diagnosis:__ Age at the time of diagnosis expressed in number of days since birth.
-* __Stage:__ The extent of a cancer in the body
+* __UUID:__ The UUID of the case, which directs the user to the [Case Entity  Page](docs/Data_Portal/Users_Guide/Cases_and_Files.md#case-detail-page)
+* __Site:__  The anatomical location of the site affected
+* __Gender:__ Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles
+* __Age at Diagnosis:__ Age at the time of diagnosis expressed in number of days since birth
+* __Stage:__ The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body. The accepted values for tumor_stage depend on the tumor site, type, and accepted staging system
 * __Survival:__ The survival state of the person
 * __Last Follow Up:__ Time interval from the date of last follow up to the date of initial pathologic diagnosis, represented as a calculated number of days
-* __Available Files per Data Category:__ The number of files available for each category.  These link to the files for the specific case.
+* __Available Files per Data Category:__ Five columns displaying the number of files available in each of the five data categories.  These link to the files for the specific case.
 * __Mutations:__ The number of mutations for the case
 * __Genes:__ The number of genes affected by mutations for the case

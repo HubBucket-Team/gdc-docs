@@ -38,12 +38,13 @@ The plot can be viewed at different zoom levels by clicking and dragging across 
 
 ## Most Frequent Mutations
 
-The ten most frequent mutations in the gene are displayed as a bar graph that indicates the number of cases that share each mutation.  
+The 20 most frequent mutations in the gene are displayed as a bar graph that indicates the number of cases that share each mutation.  
 
 [![Gene MFM](images/GDC-Gene-MFM.png)](images/GDC-Gene-MFM.png "Click to see the full image.")
 
 A table is displayed below that lists information about each mutation including:
 
+* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the [Mutation Entity Page](MutationEntity.md)
 * __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference genome and tumor sample.  
 * __Type:__ A general classification of the mutation
 * __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the [Gene Entity Page](GeneEntity.md) for the gene affected by the mutation is included
