@@ -6,12 +6,21 @@ The mutation entity page contains information about a particular mutation and ho
 
 [![Mutation Summary](images/GDC-Mutation-Summary.png)](images/GDC-Mutation-Summary.png "Click to see the full image.")
 
+<<<<<<< HEAD
 - __ID:__ A unique identifier (UUID) for this mutation
 - __DNA Change:__ Denotes the chromosome number, position, and nucleotide change of the mutation
 - __Type:__ A broad categorization of the mutation
 - __Reference Genome Assembly:__ The reference genome in which the chromosomal position refers to
 - __Allele in the Reference Assembly:__ The nucleotide(s) that compose the site in the reference assembly
 - __Functional Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
+=======
+* __ID:__ A unique identifier (UUID) for this mutation
+* __DNA Change:__ Denotes the chromosome number, position, and nucleotide change of the mutation
+* __Type:__ A broad categorization of the mutation
+* __Reference Genome Assembly:__ The reference genome in which the chromosomal position refers to
+* __Allele in the Reference Assembly:__ The nucleotide(s) that compose the site in the reference assembly
+* __Functional Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
+>>>>>>> origin/Visualization-Docs
   - __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.
   - __MODERATE__: A non-disruptive variant that might change protein effectiveness.
   - __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior.

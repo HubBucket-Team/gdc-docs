@@ -80,6 +80,7 @@ pages:
   - Case Entity: 'Visualization_Documentation/CaseEntityPage.md'
   - Gene Entity: 'Visualization_Documentation/GeneEntity.md'
   - Mutation Entity: 'Visualization_Documentation/MutationEntity.md'
+  - API Endpoints: 'Visualization_Documentation/API_Endpoints.md'
 extra:
   project_root_dir: '/'
   project_org: 'GDC'
