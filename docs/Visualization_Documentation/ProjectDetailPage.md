@@ -30,7 +30,7 @@ Below these graphs is a tabular view of the genes affected which includes the fo
 
 ### Survival Analysis
 
-Survival analysis is used to analyze the occurrence of event data over time.  In the GDC, survival analysis is done on the mortality of the cases.  Survival analysts requires:
+Survival analysis is used to analyze the occurrence of event data over time.  In the GDC, survival analysis is done on the mortality of the cases.  Survival analysis requires:
 
 *  Data on the time to a particular event (days from diagnosis to death)
 *  Information on whether the event has occurred (alive/deceased)
