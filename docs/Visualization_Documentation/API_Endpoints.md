@@ -1,6 +1,6 @@
 # Visualization API Endpoint Additions
 
-The GDC Visualization Suite uses the same API as the files and their metadata and takes advantage of three new endpoints:
+The GDC Visualization Suite uses the same API as the rest of the Data Portal and takes advantage of three new endpoints:
 
 * __ssms:__ The simple somatic mutation (`ssms`) endpoint allows users to access information about each somatic point mutation.   
 * __ssm_occurrences:__ A SSM entity as applied to a single instance (case).
@@ -56,6 +56,40 @@ __Example 2:__ A user wants a list of coordinates for all genes on chromosome 7.
 curl "https://gdc-api-staging.datacommons.io/genes?pretty=true&fields=gene_id,symbol,gene_start,gene_end&format=tsv&size=2000&filters=%7B%0D%0A%22op%22%3A%22in%22%2C%0D%0A%22content%22%3A%7B%0D%0A%22field%22%3A%22gene_chromosome%22%2C%0D%0A%22value%22%3A%5B%0D%0A%227%22%0D%0A%5D%0D%0A%7D%0D%0A%7D"
 ```
 
+__Example 3:__ A user wants to calculate which chromosome has the greatest number of ssms in case `TCGA-DU-6407`.  Because this relates to the mutations observed in a case, the `ssm_occurrences` endpoint is used.
+
+```json
+{  
+   "op":"in",
+   "content":{  
+      "field":"case.submitter_id",
+      "value":["TCGA-DU-6407"]
+   }
+}
+```
+```Shell
+curl "https://gdc-api-staging.datacommons.io/ssm_occurrences?format=tsv&fields=ssm.chromosome&size=5000&filters=%7B%0D%0A%22op%22%3A%22in%22%2C%0D%0A%22content%22%3A%7B%0D%0A%22field%22%3A%22case.submitter_id%22%2C%0D%0A%22value%22%3A%5B%0D%0A%22TCGA-DU-6407%22%0D%0A%5D%0D%0A%7D%0D%0A%7D"
+```
+```Response
+chr2    452d43e1-7b07-54f4-89e2-830ee2200d71
+chr7    4760a779-60aa-5659-959b-d9d8a4dcd3a0
+chr12   45b8955b-dd26-5de9-8e52-44b16618a544
+chr6    bc5176cd-3112-52f7-9a98-38f85dd4e020
+chr15   0a38de0d-4576-5eb8-917f-e926861a5a13
+chr8    d580b1ed-efef-5d00-85bb-68341e82bbf6
+chr14   fddd03e2-3486-52cf-9366-5f322996e468
+chr12   ae706566-468b-522c-a3ad-6e325bdcc0fc
+chr5    ef067db6-2e1a-5ee3-a3cd-2a1283d948a5
+chr8    fa88e686-e96a-569a-92b2-576f897a177c
+chr6    532825d7-9604-50fc-b661-1355fc1a89b2
+chr15   fc52b56d-1a49-58c0-83a0-25a7a259c9cf
+chr7    6d287d4c-c8b3-5cf7-9051-94625431e1e5
+chr11   87717814-c7d9-5adf-a704-19b7c7b0a5a5
+chr2    b1a57129-5a52-5fd9-a6c1-335be26f3b57
+chr6    be64ef89-bec0-5472-97e5-e545f2144f22
+(truncated)
+```
+
 ## Analysis Endpoints
 
 In addition the three endpoints mentioned previously, several `analysis` endpoints were designed to quickly retrieve specific datasets used for visualization display.  
@@ -103,7 +137,74 @@ __Example 2:__ The following demonstrates a use of the `analysis/top_mutated_gen
 ```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/top_mutated_genes_by_project?fields=gene_id,symbol&filters=%7B%22op%22%3A%22AND%22%2C%22content%22%3A%5B%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22case.project.project_id%22%2C%22value%22%3A%5B%22TCGA-DLBC%22%5D%7D%7D%2C%7B%22op%22%3A%22in%22%2C%22content%22%3A%7B%22field%22%3A%22case.ssm.consequence.transcript.annotation.impact%22%2C%22value%22%3A%5B%22HIGH%22%2C%22MODERATE%22%5D%7D%7D%5D%7D"
 ```
-
+```
+{
+  "data": {
+    "hits": [
+      {
+        "_score": 14.0,
+        "symbol": "BTG2",
+        "gene_id": "ENSG00000159388"
+      },
+      {
+        "_score": 10.0,
+        "symbol": "FAT4",
+        "gene_id": "ENSG00000196159"
+      },
+      {
+        "_score": 10.0,
+        "symbol": "IGHV1-69-2",
+        "gene_id": "ENSG00000280411"
+      },
+      {
+        "_score": 9.0,
+        "symbol": "IGHG2",
+        "gene_id": "ENSG00000211893"
+      },
+      {
+        "_score": 9.0,
+        "symbol": "B2M",
+        "gene_id": "ENSG00000166710"
+      },
+      {
+        "_score": 9.0,
+        "symbol": "PIM1",
+        "gene_id": "ENSG00000137193"
+      },
+      {
+        "_score": 8.0,
+        "symbol": "IGHG1",
+        "gene_id": "ENSG00000211896"
+      },
+      {
+        "_score": 8.0,
+        "symbol": "IGHM",
+        "gene_id": "ENSG00000211899"
+      },
+      {
+        "_score": 8.0,
+        "symbol": "MUC4",
+        "gene_id": "ENSG00000145113"
+      },
+      {
+        "_score": 8.0,
+        "symbol": "KMT2D",
+        "gene_id": "ENSG00000167548"
+      }
+    ],
+    "pagination": {
+      "count": 10,
+      "sort": "None",
+      "from": 0,
+      "page": 1,
+      "total": 2667,
+      "pages": 267,
+      "size": 10
+    }
+  },
+  "warnings": {}
+}
+```
 
 __Example 3:__ The `analysis/top_mutated_cases_by_gene` endpoint will generate information about the cases that are most affected by mutations in a given number of genes.  Below, the file count for each category is given for the cases most affected by mutations in these 50 genes.
 
@@ -112,15 +213,120 @@ curl "https://gdc-api-staging.datacommons.io/analysis/top_mutated_cases_by_gene?
 ```
 
 
+__Example 4:__  The `analysis/mutated_cases_count_by_project` endpoint will produce counts for the number of cases with associated ssm data in each project.
 
 ```
 curl "https://gdc-api-staging.datacommons.io/analysis/mutated_cases_count_by_project?size=0&pretty=true"
+```
+```
+{
+  "hits": {
+    "hits": [],
+    "total": 1955,
+    "max_score": 0.0
+  },
+  "_shards": {
+    "successful": 10,
+    "failed": 0,
+    "total": 10
+  },
+  "took": 4,
+  "aggregations": {
+    "projects": {
+      "buckets": [
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 504
+            },
+            "doc_count": 3526
+          },
+          "key": "TCGA-LGG",
+          "doc_count": 504
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 389
+            },
+            "doc_count": 2428
+          },
+          "key": "TCGA-GBM",
+          "doc_count": 389
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 336
+            },
+            "doc_count": 2351
+          },
+          "key": "TCGA-KIRC",
+          "doc_count": 336
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 288
+            },
+            "doc_count": 2015
+          },
+          "key": "TCGA-KIRP",
+          "doc_count": 288
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 183
+            },
+            "doc_count": 1280
+          },
+          "key": "TCGA-ESCA",
+          "doc_count": 183
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 141
+            },
+            "doc_count": 858
+          },
+          "key": "TCGA-LAML",
+          "doc_count": 141
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 66
+            },
+            "doc_count": 462
+          },
+          "key": "TCGA-KICH",
+          "doc_count": 66
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 48
+            },
+            "doc_count": 336
+          },
+          "key": "TCGA-DLBC",
+          "doc_count": 48
+        }
+      ],
+      "sum_other_doc_count": 0,
+      "doc_count_error_upper_bound": 0
+    }
+  },
+  "timed_out": false
+}
 ```
 ### Survival Analysis
 
 [Survival plots](link) are generated for different subsets of data, based on variants or projects, in the GDC Data Portal. The `analysis/survival` endpoint can be used to programmatically retrieve the raw data used to generate these plots and apply different filters to the data. Note that the `fields` and `format` parameters cannot be modified.
 
- __Example:__ A user wants to download data to generate a survival for cases from the project TCGA-DLBC.
+ __Example:__ A user wants to download data to generate a survival plot for cases from the project TCGA-DLBC.
 
 ```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/survival?filters=%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%22TCGA-DLBC%22%7D%7D%5D&pretty=true"
