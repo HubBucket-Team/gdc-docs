@@ -31,6 +31,7 @@ Below these graphs is a tabular view of the genes affected which includes the fo
 ### Survival Analysis
 
 Survival analysis is used to analyze the occurrence of event data over time.  In the GDC, survival analysis is done on the mortality of the cases.  Survival analysts requires:
+
 *  Data on the time to a particular event (days from diagnosis to death)
 *  Information on whether the event has occurred (alive/deceased)
 *  Data split into different categories or groups (i.e. gender)
@@ -40,6 +41,7 @@ The survival analysis in the GDC uses a Kaplan-Meier estimator:
 [![Kaplan-Meier Estimator](images/gdc-kaplan-meier-estimator.png)](images/gdc-kaplan-meier-estimator "Click to see the full image.")
 
 Where:
+
  * S(t<sub>i</sub>) is the estimated survival probability for any particular one of the t time periods
  * n<sub>i</sub> is the number of subjects at risk at the beginning of time period t<sub>i</sub>
  * and d<sub>i</sub> is the number of subjects who die during time period t<sub>i</sub>
@@ -98,9 +100,9 @@ A table is displayed below that lists information about each mutation including:
 * __# Affected Cases in Project:__ The number of affected cases in the particular project
 * __# Affected Cases in GDC:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
 * __Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
-  * __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.
-  * __MODERATE__: A non-disruptive variant that might change protein effectiveness.
-  * __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior.
+  - __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.
+  - __MODERATE__: A non-disruptive variant that might change protein effectiveness.
+  - __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior.
 * __Survival Analysis:__ An icon that when clicked, will plot the survival rate between the gene's mutated and non-mutated cases
 
 ## Most Affected Cases
