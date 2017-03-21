@@ -129,10 +129,287 @@ In addition the three endpoints mentioned previously, several `analysis` endpoin
 * __analysis/top_mutated_cases_by_ssm__
 * __analysis/mutated_cases_count_by_project__
 
-__Example 1:__  This gives the number of cases with a mutation in each gene listed in the `gene_ids` parameter.  Note that this endpoint cannot be used with the `format` or `fields` parameters.
+__Example 1:__ The `analysis/top_cases_counts_by_genes` endpoint gives the number of cases with a mutation in each gene listed in the `gene_ids` parameter for each project. Note that this endpoint cannot be used with the `format` or `fields` parameters. In this case, the query will produce the number of cases in each projects with mutations in the gene `ENSG00000155657`. 
 
 ```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/top_cases_counts_by_genes?gene_ids=ENSG00000155657&pretty=true"
+```
+```Response
+{
+  "hits": {
+    "hits": [
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "33c09cd7-2ccc-4a69-b738-79dfd9aa149d",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      },
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "73c712fe-54d6-4743-90bb-03313eb9fa77",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      },
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "d26f3a6b-72f4-4e48-815e-57b8b211112d",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      },
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "da5f6940-e8ee-4fd1-a8da-4cd68e02e59c",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      },
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "66e2fda4-23de-49c6-bb89-82e9edc56e4b",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      },
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "5613f5f6-086d-470b-8f77-6dcb7f8625b7",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      },
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "df1e2e79-0126-4f3a-85e3-36f59be04622",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      },
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "f9ce2045-2821-4843-b5e9-cf7cc7e783d4",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      },
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "b1c4579c-72fa-4974-830c-b6a81ace45f4",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      },
+      {
+        "_score": 1.0,
+        "_type": "case_centric",
+        "_id": "50f29fc7-c111-4101-b970-b1e1dd3388cf",
+        "_source": {},
+        "_index": "gdc_r113_case_centric"
+      }
+    ],
+    "total": 222,
+    "max_score": 1.0
+  },
+  "_shards": {
+    "successful": 10,
+    "failed": 0,
+    "total": 10
+  },
+  "took": 879,
+  "aggregations": {
+    "projects": {
+      "buckets": [
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 56
+            },
+            "doc_count": 392
+          },
+          "genes": {
+            "my_genes": {
+              "gene_id": {
+                "buckets": [
+                  {
+                    "key": "ENSG00000155657",
+                    "doc_count": 56
+                  }
+                ],
+                "sum_other_doc_count": 0,
+                "doc_count_error_upper_bound": 0
+              },
+              "doc_count": 56
+            },
+            "doc_count": 8206
+          },
+          "key": "TCGA-ESCA",
+          "doc_count": 56
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 45
+            },
+            "doc_count": 282
+          },
+          "genes": {
+            "my_genes": {
+              "gene_id": {
+                "buckets": [
+                  {
+                    "key": "ENSG00000155657",
+                    "doc_count": 45
+                  }
+                ],
+                "sum_other_doc_count": 0,
+                "doc_count_error_upper_bound": 0
+              },
+              "doc_count": 45
+            },
+            "doc_count": 12305
+          },
+          "key": "TCGA-GBM",
+          "doc_count": 45
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 40
+            },
+            "doc_count": 280
+          },
+          "genes": {
+            "my_genes": {
+              "gene_id": {
+                "buckets": [
+                  {
+                    "key": "ENSG00000155657",
+                    "doc_count": 40
+                  }
+                ],
+                "sum_other_doc_count": 0,
+                "doc_count_error_upper_bound": 0
+              },
+              "doc_count": 40
+            },
+            "doc_count": 2270
+          },
+          "key": "TCGA-KIRC",
+          "doc_count": 40
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 38
+            },
+            "doc_count": 265
+          },
+          "genes": {
+            "my_genes": {
+              "gene_id": {
+                "buckets": [
+                  {
+                    "key": "ENSG00000155657",
+                    "doc_count": 38
+                  }
+                ],
+                "sum_other_doc_count": 0,
+                "doc_count_error_upper_bound": 0
+              },
+              "doc_count": 38
+            },
+            "doc_count": 2401
+          },
+          "key": "TCGA-KIRP",
+          "doc_count": 38
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 32
+            },
+            "doc_count": 224
+          },
+          "genes": {
+            "my_genes": {
+              "gene_id": {
+                "buckets": [
+                  {
+                    "key": "ENSG00000155657",
+                    "doc_count": 32
+                  }
+                ],
+                "sum_other_doc_count": 0,
+                "doc_count_error_upper_bound": 0
+              },
+              "doc_count": 32
+            },
+            "doc_count": 7672
+          },
+          "key": "TCGA-LGG",
+          "doc_count": 32
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 6
+            },
+            "doc_count": 42
+          },
+          "genes": {
+            "my_genes": {
+              "gene_id": {
+                "buckets": [
+                  {
+                    "key": "ENSG00000155657",
+                    "doc_count": 6
+                  }
+                ],
+                "sum_other_doc_count": 0,
+                "doc_count_error_upper_bound": 0
+              },
+              "doc_count": 6
+            },
+            "doc_count": 994
+          },
+          "key": "TCGA-DLBC",
+          "doc_count": 6
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 5
+            },
+            "doc_count": 33
+          },
+          "genes": {
+            "my_genes": {
+              "gene_id": {
+                "buckets": [
+                  {
+                    "key": "ENSG00000155657",
+                    "doc_count": 5
+                  }
+                ],
+                "sum_other_doc_count": 0,
+                "doc_count_error_upper_bound": 0
+              },
+              "doc_count": 5
+            },
+            "doc_count": 56
+          },
+          "key": "TCGA-LAML",
+          "doc_count": 5
+        }
+      ],
+      "sum_other_doc_count": 0,
+      "doc_count_error_upper_bound": 0
+    }
+  },
+  "timed_out": false
+}
 ```
 
 __Example 2:__ The following demonstrates a use of the `analysis/top_mutated_genes_by_project` endpoint.  This will output the top mutated genes for "TCGA-DLBC" and only count the mutations that have a `HIGH` or `MODERATE` impact on gene function.
