@@ -3,10 +3,14 @@
 The GDC Visualization Suite uses the same API as the rest of the Data Portal and takes advantage of three new endpoints:
 
 * __ssms:__ The simple somatic mutation (`ssms`) endpoint allows users to access information about each somatic point mutation. For example, a `ssm` would represent the transition of C to T at position 52000 of chromosome 1.  
-* __ssm_occurrences:__ A SSM entity as applied to a single instance (case). An example of a `ssm occurrence` would be that the transition of C to T at position 52000 of chromosome 1 occurred in patient A.  
+* __ssm_occurrences:__ A SSM entity as applied to a single instance (case). An example of a `ssm occurrence` would be that the transition of C to T at position 52000 of chromosome 1 occurred in patient TCGA-XX-XXXX.  
 * __genes:__ The `genes` endpoint allows users to access in-depth information about each gene.  
 
-The methods for retrieving information from these endpoint are very similar to those used for the `cases` and `files` endpoints. These methods are explored in depth in the [API Search and Retrieval](https://docs.gdc.cancer.gov/API/Users_Guide/Search_and_Retrieval/) documentation.
+The methods for retrieving information from these endpoint are very similar to those used for the `cases` and `files` endpoints. These methods are explored in depth in the [API Search and Retrieval](https://docs.gdc.cancer.gov/API/Users_Guide/Search_and_Retrieval/) documentation. The `_mapping` parameter can also be used with each of these endpoints to generate a list of potential fields.  For example:
+
+```
+https://gdc-api-staging.datacommons.io/ssms/_mapping
+```
 
 While not an endpoint, the `observation` entity is featured in the visualization portion of the API. The `observation` entity provides information from the MAF file, such as read depth and normal genotype, that supports the assessment that the associated `ssm` was observed.  
 
@@ -1064,3 +1068,91 @@ curl "https://gdc-api-staging.datacommons.io/analysis/survival?filters=%5B%7B%22
   ]
 }
 ```
+
+__Example 2:__ Here the survival endpoint is used to compare two survival plots for TCGA-BRCA cases.  One plot will display survival information about cases with a particular mutation (in this case: chr3:g.179234297A>G) and the other plot will display information about cases without that mutation.
+
+```json
+[  
+   {  
+      "op":"and",
+      "content":[  
+         {  
+            "op":"=",
+            "content":{  
+               "field":"cases.project.project_id",
+               "value":"TCGA-BRCA"
+            }
+         },
+         {  
+            "op":"=",
+            "content":{  
+               "field":"gene.ssm.ssm_id",
+               "value":"937a26c2-089c-51de-a0f9-70567d965c38"
+            }
+         }
+      ]
+   },
+   {  
+      "op":"and",
+      "content":[  
+         {  
+            "op":"=",
+            "content":{  
+               "field":"cases.project.project_id",
+               "value":"TCGA-BRCA"
+            }
+         },
+         {  
+            "op":"excludeifany",
+            "content":{  
+               "field":"gene.ssm.ssm_id",
+               "value":"937a26c2-089c-51de-a0f9-70567d965c38"
+            }
+         }
+      ]
+   }
+]
+```
+```Shell
+curl "https://gdc-api-staging.datacommons.io/analysis/survival?filters=%5B%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%22TCGA-BRCA%22%7D%7D%2C%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22gene.ssm.ssm_id%22%2C%22value%22%3A%22937a26c2-089c-51de-a0f9-70567d965c38%22%7D%7D%5D%7D%2C%7B%22op%22%3A%22and%22%2C%22content%22%3A%5B%7B%22op%22%3A%22%3D%22%2C%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%22TCGA-BRCA%22%7D%7D%2C%7B%22op%22%3A%22excludeifany%22%2C%22content%22%3A%7B%22field%22%3A%22gene.ssm.ssm_id%22%2C%22value%22%3A%22937a26c2-089c-51de-a0f9-70567d965c38%22%7D%7D%5D%7D%5D"
+```
+```json2
+{
+  "overallStats": {
+    "degreesFreedom": 1,
+    "chiSquared": 0.8577589072612264,
+    "pValue": 0.35436660628146011
+  },
+  "results": [
+    {
+      "donors": [
+        {
+          "survivalEstimate": 1,
+          "id": "a991644b-3ee6-4cda-acf0-e37de48a49fc",
+          "censored": true,
+          "time": 10
+        },
+        {
+          "survivalEstimate": 1,
+          "id": "2e1e3bf0-1708-4b65-936c-48b89eb8966a",
+          "censored": true,
+          "time": 19
+        },
+(truncated)
+],
+"meta": {
+  "id": 140055251282040
+}
+},
+{
+"donors": [
+  {
+    "survivalEstimate": 1,
+    "id": "5e4187c9-98f8-4bdb-a8da-6a914e96f47a",
+    "censored": true,
+    "time": -31
+  },
+(truncated)
+```
+
+The output represents two sets of coordinates delimited as objects with the `donors` tag. One set of coordinates will generated a survival plot representing TCGA-BRCA cases that have the mutation of interest and the other will generate a survival plot for the remaining cases in TCGA-BRCA.
