@@ -2,8 +2,8 @@
 
 The GDC Visualization Suite uses the same API as the rest of the Data Portal and takes advantage of three new endpoints:
 
-* __ssms:__ The simple somatic mutation (`ssms`) endpoint allows users to access information about each somatic point mutation.   
-* __ssm_occurrences:__ A SSM entity as applied to a single instance (case).
+* __ssms:__ The simple somatic mutation (`ssms`) endpoint allows users to access information about each somatic point mutation. For example, a `ssm` would represent the transition of C to T at position 52000 of chromosome 1.  
+* __ssm_occurrences:__ A SSM entity as applied to a single instance (case). An example of a `ssm occurrence` would be that the transition of C to T at position 52000 of chromosome 1 occurred in patient A.  
 * __genes:__ The `genes` endpoint allows users to access in-depth information about each gene.  
 
 The methods for retrieving information from these endpoint are very similar to those used for the `cases` and `files` endpoints. These methods are explored in depth in the [API Search and Retrieval](https://docs.gdc.cancer.gov/API/Users_Guide/Search_and_Retrieval/) documentation.
@@ -84,7 +84,7 @@ gene_start      gene_end        symbol  id
 (truncated)
 ```
 
-__Example 3:__ A user wants to calculate which chromosome has the greatest number of ssms in case `TCGA-DU-6407`.  Because this relates to the mutations observed in a case, the `ssm_occurrences` endpoint is used.
+__Example 3:__ A user wants to calculate which chromosome in case `TCGA-DU-6407` contains the greatest number of ssms. Because this relates to the mutations observed in a case, the `ssm_occurrences` endpoint is used.
 
 ```json
 {  
@@ -118,6 +118,8 @@ chr6    be64ef89-bec0-5472-97e5-e545f2144f22
 (truncated)
 ```
 
+The number of ssms in each chromosome could then be determined by taking the count of each value in the first column.
+
 ## Analysis Endpoints
 
 In addition the three endpoints mentioned previously, several `analysis` endpoints were designed to quickly retrieve specific datasets used for visualization display.  
@@ -129,7 +131,7 @@ In addition the three endpoints mentioned previously, several `analysis` endpoin
 * __analysis/top_mutated_cases_by_ssm__
 * __analysis/mutated_cases_count_by_project__
 
-__Example 1:__ The `analysis/top_cases_counts_by_genes` endpoint gives the number of cases with a mutation in each gene listed in the `gene_ids` parameter for each project. Note that this endpoint cannot be used with the `format` or `fields` parameters. In this case, the query will produce the number of cases in each projects with mutations in the gene `ENSG00000155657`. 
+__Example 1:__ The `analysis/top_cases_counts_by_genes` endpoint gives the number of cases with a mutation in each gene listed in the `gene_ids` parameter for each project. Note that this endpoint cannot be used with the `format` or `fields` parameters. In this case, the query will produce the number of cases in each projects with mutations in the gene `ENSG00000155657`.
 
 ```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/top_cases_counts_by_genes?gene_ids=ENSG00000155657&pretty=true"
@@ -412,7 +414,33 @@ curl "https://gdc-api-staging.datacommons.io/analysis/top_cases_counts_by_genes?
 }
 ```
 
-__Example 2:__ The following demonstrates a use of the `analysis/top_mutated_genes_by_project` endpoint.  This will output the top mutated genes for "TCGA-DLBC" and only count the mutations that have a `HIGH` or `MODERATE` impact on gene function.
+This JSON-formatted output is broken up by project. For an example, see the following text:
+
+```json
+          "genes": {
+            "my_genes": {
+              "gene_id": {
+                "buckets": [
+                  {
+                    "key": "ENSG00000155657",
+                    "doc_count": 45
+                  }
+                ],
+                "sum_other_doc_count": 0,
+                "doc_count_error_upper_bound": 0
+              },
+              "doc_count": 45
+            },
+            "doc_count": 12305
+          },
+          "key": "TCGA-GBM",
+          "doc_count": 45
+        }
+```
+
+This portion of the output shows TCGA-GBM including 45 cases that have `ssms` in the gene `ENSG00000155657`.
+
+__Example 2:__ The following demonstrates a use of the `analysis/top_mutated_genes_by_project` endpoint.  This will output the genes that are mutated in the most cases in "TCGA-DLBC" and will count the mutations that have a `HIGH` or `MODERATE` impact on gene function.
 
 ```json
 {  
@@ -622,7 +650,7 @@ curl "https://gdc-api-staging.datacommons.io/analysis/top_mutated_cases_by_gene?
 (truncated)
 ```
 
-__Example 4:__  The `analysis/mutated_cases_count_by_project` endpoint produces counts for the number of cases that have associated ssm data in each project.
+__Example 4:__  The `analysis/mutated_cases_count_by_project` endpoint produces counts for the number of cases that have associated ssm data in each project. The number of affected cases can be found under `"case_with_ssm": {"doc_count": $case_count}`.  
 
 ```Shell
 curl "https://gdc-api-staging.datacommons.io/analysis/mutated_cases_count_by_project?size=0&pretty=true"
