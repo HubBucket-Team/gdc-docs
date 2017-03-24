@@ -1,6 +1,6 @@
 # Visualization API Endpoint Additions
 
-The GDC Visualization Suite uses the same API as the rest of the Data Portal and takes advantage of three new endpoints:
+The GDC Visualization Suite uses the same API as the rest of the Data Portal and takes advantage of several new endpoints:
 
 * __ssms:__ The simple somatic mutation (`ssms`) endpoint allows users to access information about each somatic point mutation. For example, a `ssm` would represent the transition of C to T at position 52000 of chromosome 1.  
 * __ssm_occurrences:__ A SSM entity as applied to a single instance (case). An example of a `ssm occurrence` would be that the transition of C to T at position 52000 of chromosome 1 occurred in patient TCGA-XX-XXXX.  
@@ -8,18 +8,15 @@ The GDC Visualization Suite uses the same API as the rest of the Data Portal and
 
 The methods for retrieving information from these endpoint are very similar to those used for the `cases` and `files` endpoints. These methods are explored in depth in the [API Search and Retrieval](https://docs.gdc.cancer.gov/API/Users_Guide/Search_and_Retrieval/) documentation. The `_mapping` parameter can also be used with each of these endpoints to generate a list of potential fields.  For example:
 
-```
-https://gdc-api-staging.datacommons.io/ssms/_mapping
-```
+`https://gdc-api-staging.datacommons.io/ssms/_mapping`
 
-While not an endpoint, the `observation` entity is featured in the visualization portion of the API. The `observation` entity provides information from the MAF file, such as read depth and normal genotype, that supports the assessment that the associated `ssm` was observed.  
+While it is not an endpoint, the `observation` entity is featured in the visualization section of the API. The `observation` entity provides information from the MAF file, such as read depth and normal genotype, that supports the validity of the associated `ssm`.  
 
 [![Viz Model](images/Viz_Model.png)](images/Viz_Model.png "Click to see the full image.")
 
-
 ## Endpoint Examples
 
-__Example 1:__ A user would like to access information about the gene `ZMPSTE24`, which has an Ensembl gene ID of `ENSG00000084073`.  This would be accomplished by appending the Ensembl gene ID (`gene_id`) to the `genes` endpoint.
+__Example 1:__ A user would like to access information about the gene `ZMPSTE24`, which has an Ensembl gene ID of `ENSG00000084073`.  This would be accomplished by appending `ENSG00000084073` (`gene_id`) to the `genes` endpoint.
 
 ```Shell
 curl "https://gdc-api-staging.datacommons.io/genes/ENSG00000084073?pretty=true"
@@ -88,7 +85,7 @@ gene_start      gene_end        symbol  id
 (truncated)
 ```
 
-__Example 3:__ A user wants to calculate which chromosome in case `TCGA-DU-6407` contains the greatest number of ssms. Because this relates to the mutations observed in a case, the `ssm_occurrences` endpoint is used.
+__Example 3:__ A user wants to determine which chromosome in case `TCGA-DU-6407` contains the greatest number of ssms. Because this relates to mutations that are observed in a case, the `ssm_occurrences` endpoint is used.
 
 ```json
 {  
@@ -122,11 +119,11 @@ chr6    be64ef89-bec0-5472-97e5-e545f2144f22
 (truncated)
 ```
 
-The number of ssms in each chromosome could then be determined by taking the count of each value in the first column.
+The number of ssms in each chromosome could then be determined by calculating the count of each value in the first column.
 
 ## Analysis Endpoints
 
-In addition the three endpoints mentioned previously, several `analysis` endpoints were designed to quickly retrieve specific datasets used for visualization display.  
+In addition the `ssms`, `ssm_occurrences`, and `genes` endpoints mentioned previously, several `analysis` endpoints were designed to quickly retrieve specific datasets used for visualization display.  
 
 * __analysis/survival__
 * __analysis/top_cases_counts_by_genes__
@@ -1069,7 +1066,7 @@ curl "https://gdc-api-staging.datacommons.io/analysis/survival?filters=%5B%7B%22
 }
 ```
 
-__Example 2:__ Here the survival endpoint is used to compare two survival plots for TCGA-BRCA cases.  One plot will display survival information about cases with a particular mutation (in this case: chr3:g.179234297A>G) and the other plot will display information about cases without that mutation.
+__Example 2:__ Here the survival endpoint is used to compare two survival plots for TCGA-BRCA cases.  One plot will display survival information about cases with a particular mutation (in this case: chr3:g.179234297A>G) and the other plot will display information about cases without that mutation. This type of query will also print the results of a chi-squared analysis between the two subsets of cases.  
 
 ```json
 [  
