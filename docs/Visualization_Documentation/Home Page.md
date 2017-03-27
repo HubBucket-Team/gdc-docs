@@ -1,8 +1,16 @@
-# GDC Portal Home Page
+# GDC Visualization Suite
+
+This guide describes the new GDC Visualization features that can be accessed. Visualization features include detailed descriptions of mutations, genes, and their frequency in disease types; graphical representation of mutation positions, and dynamic survival analysis plots. Additionally, new API endpoints are available for users to programmatically retrieve the data used to generate the visualization features.  
+
+The mutation-based visualization features are derived from open-access MAF files that were produced by GDC variant-calling pipelines. The format of these MAF files was developed by and for the GDC and is outlined in the [MAF Format](MAF_Format.md) documentation.
+
+## GDC Portal Home Page
 
 The [GDC Portal](https://gdc-portal-staging.datacommons.io) home page is the entry way to accessing data in the Genomic Data Commons.  
 
+---
 [![GDC Home Page](images/GDC-Home-Page.png)](images/GDC-Home-Page.png "Click to see the full image.")
+---
 
 Data within the Genomic Data Commons is organized by project based on a primary site (i.e Brain), though can be narrowed down in a few ways listed below.
 
