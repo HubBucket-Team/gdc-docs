@@ -6,7 +6,7 @@ The Project List page displays statistics about the projects that are available 
 
 ## Top Mutated Genes in Selected Projects
 
-This dynamically generated bar graph shows the top ten most frequent mutations. The bars represent the frequency of each mutation and is broken down into different colored segments by project and disease type. The graphic is updated as filters are applied for projects, programs, disease types, and data category available to the project. Using the "Open Query in Data Page" button lifts the filters from this page to the data section of the Portal.  
+This dynamically generated bar graph shows the ten genes with the most mutations. The bars represent the frequency of each mutation and is broken down into different colored segments by project and disease type. The graphic is updated as filters are applied for projects, programs, disease types, and data category available to the project.
 
 Hovering the cursor over each bar will display information about the number of cases affected by the disease type and clicking on each bar will bring the user to the [gene entity](GeneEntity.md) page for the gene associated with the mutation.
 

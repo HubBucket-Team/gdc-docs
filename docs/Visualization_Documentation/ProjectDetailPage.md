@@ -32,9 +32,12 @@ Below these graphs is a tabular view of the genes affected which includes the fo
 
 Survival analysis is used to analyze the occurrence of event data over time.  In the GDC, survival analysis is done on the mortality of the cases.  Survival analysis requires:
 
-*  Data on the time to a particular event (days from diagnosis to death)
+*  Data on the time to a particular event (date of death or last follow up)
+  * Fields:  __diagnoses.days_to_death__ and __diagnoses.days_to_last_follow_up__
 *  Information on whether the event has occurred (alive/deceased)
-*  Data split into different categories or groups (i.e. gender)
+  * Fields:  __diagnoses.vital_status__
+*  Data split into different categories or groups (i.e. gender, etc.)
+  * Fields:  __demographic.gender__
 
 The survival analysis in the GDC uses a Kaplan-Meier estimator:
 
