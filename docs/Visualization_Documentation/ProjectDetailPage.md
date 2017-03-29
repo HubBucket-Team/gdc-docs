@@ -116,7 +116,7 @@ The final section of the project detail page is a display of the top 20 cases in
 
 Below the bar graph, a table contains information about these cases:
 
-* __UUID:__ The UUID of the case, which directs the user to the [Case Page](docs/Data_Portal/Users_Guide/Cases_and_Files.md#case-detail-page)
+* __UUID:__ The UUID of the case, which directs the user to the [Case Page](docs/Visualization_Documentation/CaseEntityPage.md)
 * __Site:__  The anatomical location of the site affected
 * __Gender:__ Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles
 * __Age at Diagnosis:__ Age at the time of diagnosis expressed in number of days since birth
