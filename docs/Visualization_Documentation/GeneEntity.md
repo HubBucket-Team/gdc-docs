@@ -1,10 +1,10 @@
-# Gene Entity Page
+# Gene Page
 
-The gene entity page describes each gene with mutation data featured at the GDC and provides results related to the analyses that are performed on these genes.  
+The gene page describes each gene with mutation data featured at the GDC and provides results related to the analyses that are performed on these genes.  
 
 ## Summary
 
-The summary section of the gene entity page contains the following information:
+The summary section of the gene page contains the following information:
 
 [![Gene Summary](images/GDC-Gene-Summary.png)](images/GDC-Gene-Summary.png "Click to see the full image.")
 
@@ -44,10 +44,10 @@ The 20 most frequent mutations in the gene are displayed as a bar graph that ind
 
 A table is displayed below that lists information about each mutation including:
 
-* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the [Mutation Entity Page](MutationEntity.md)
+* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the [Mutation Page](MutationEntity.md)
 * __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference genome and tumor sample.  
 * __Type:__ A general classification of the mutation
-* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the [Gene Entity Page](GeneEntity.md) for the gene affected by the mutation is included
+* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the [Gene Page](GeneEntity.md) for the gene affected by the mutation is included
 * __# Affected Cases:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
 * __Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
   - __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.

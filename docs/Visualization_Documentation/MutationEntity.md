@@ -1,6 +1,6 @@
-# Mutation Entity Page
+# Mutation Page
 
-The mutation entity page contains information about a particular mutation and how it affects the associated gene. Each mutation is identified by its chromosomal position and nucleotide-level change.
+The mutation page contains information about a particular mutation and how it affects the associated gene. Each mutation is identified by its chromosomal position and nucleotide-level change.
 
 ## Summary
 

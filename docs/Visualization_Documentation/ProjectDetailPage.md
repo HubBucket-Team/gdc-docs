@@ -20,7 +20,7 @@ The top of this section contains a plot of the most frequently mutated genes and
 
 Below these graphs is a tabular view of the genes affected which includes the following information:
 
-* __Symbol:__ The gene symbol when clicked, brings up the [Gene Entity Page](GeneEntity.md)
+* __Symbol:__ The gene symbol when clicked, brings up the [Gene Page](GeneEntity.md)
 * __Name:__ Full name of the gene
 * __Cytoband:__ The location of the mutation on the chromosome in terms of Giemsa-stained samples.
 * __# Affected Cases in Project:__ The number of cases within the specified project that contain a mutation on this gene
@@ -75,7 +75,7 @@ The right side of the grid displays additional information about the genes under
 
 ### OncoGrid Options
 
-To facilitate readability and comparisons, drag-and-drop can be used to reorder the gene rows.  Double clicking a row in the "# Cases Affected" bar at the right side of the graphic will bring the user to the respective [Gene Entity](GeneEntity.md) page. Hovering over a cell will display information about the mutation such as its ID and biological consequence. Clicking on the cell will bring the user to the respective [Mutation Entity](MutationEntity.md) page.  
+To facilitate readability and comparisons, drag-and-drop can be used to reorder the gene rows.  Double clicking a row in the "# Cases Affected" bar at the right side of the graphic will bring the user to the respective [Gene Page](GeneEntity.md) page. Hovering over a cell will display information about the mutation such as its ID and biological consequence. Clicking on the cell will bring the user to the respective [Mutation Page](MutationEntity.md) page.  
 
 A tool bar at the top right of the graphic allows the user to export the data as a JSON object, PNG image, or SVG image.  Seven buttons are available in this toolbar:
 
@@ -96,10 +96,10 @@ The top of this section contains a plot of the most frequently mutated genes and
 
 A table is displayed below that lists information about each mutation including:
 
-* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the [Mutation Entity Page](MutationEntity.md)
+* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the [Mutation Page](MutationEntity.md)
 * __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference genome and tumor sample.  
 * __Type:__ A general classification of the mutation
-* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the [Gene Entity Page](GeneEntity.md) for the gene affected by the mutation is included
+* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the [Gene Page](GeneEntity.md) for the gene affected by the mutation is included
 * __# Affected Cases in Project:__ The number of affected cases in the particular project
 * __# Affected Cases in GDC:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
 * __Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
@@ -110,13 +110,13 @@ A table is displayed below that lists information about each mutation including:
 
 ## Most Affected Cases
 
-The final section of the project entity page is a display of the top 20 cases in a specified project, with the most affected genes.
+The final section of the project detail page is a display of the top 20 cases in a specified project, with the most affected genes.
 
 [![Most Affected Cases](images/gdc-most-affected-cases.png)](images/gdc-most-affected-cases.png "Click to see the full image.")
 
 Below the bar graph, a table contains information about these cases:
 
-* __UUID:__ The UUID of the case, which directs the user to the [Case Entity  Page](docs/Data_Portal/Users_Guide/Cases_and_Files.md#case-detail-page)
+* __UUID:__ The UUID of the case, which directs the user to the [Case Page](docs/Data_Portal/Users_Guide/Cases_and_Files.md#case-detail-page)
 * __Site:__  The anatomical location of the site affected
 * __Gender:__ Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles
 * __Age at Diagnosis:__ Age at the time of diagnosis expressed in number of days since birth
