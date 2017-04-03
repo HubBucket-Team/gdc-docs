@@ -70,7 +70,7 @@ The grid is interactive, meaning genes can be rearranged on the left axis and ho
 
 The right side of the grid displays additional information about the genes under consideration:
 
-* __Gene Sets:__ Describes whether a gene is part of the Gene Census.  (The cancer Gene Census is an ongoing effort to catalogue those genes for which mutations have been causally implicated in cancer)
+* __Gene Sets:__ Describes whether a gene is part of the [Gene Census](http://cancer.sanger.ac.uk/census/).  (The cancer Gene Census is an ongoing effort to catalogue those genes for which mutations have been causally implicated in cancer)
 * __GDC:__ Heat-map of all cases in the GDC affected with a mutation in this gene
 
 ### OncoGrid Options
@@ -121,7 +121,7 @@ Below the bar graph, a table contains information about these cases:
 * __Gender:__ Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles
 * __Age at Diagnosis:__ Age at the time of diagnosis expressed in number of days since birth
 * __Stage:__ The extent of a cancer in the body. Staging is usually based on the size of the tumor, whether lymph nodes contain cancer, and whether the cancer has spread from the original site to other parts of the body. The accepted values for tumor_stage depend on the tumor site, type, and accepted staging system
-* __Survival:__ The survival state of the person
+* __Survival:__ The number of days until death
 * __Last Follow Up:__ Time interval from the date of last follow up to the date of initial pathologic diagnosis, represented as a calculated number of days
 * __Available Files per Data Category:__ Five columns displaying the number of files available in each of the five data categories.  These link to the files for the specific case.
 * __Mutations:__ The number of mutations for the case
