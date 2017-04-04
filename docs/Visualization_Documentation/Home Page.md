@@ -8,9 +8,7 @@ The mutation-based visualization features are derived from open-access MAF files
 
 The [GDC Portal](https://gdc-portal-staging.datacommons.io) home page is the entry way to accessing data in the Genomic Data Commons.  
 
----
 [![GDC Home Page](images/GDC-Home-Page.png)](images/GDC-Home-Page.png "Click to see the full image.")
----
 
 The Genomic Data Commons is organized by project based on a primary site (i.e Brain). Data can be narrowed down in a few ways listed below.
 

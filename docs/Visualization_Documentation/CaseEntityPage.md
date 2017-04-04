@@ -1,6 +1,6 @@
-# Case Page
+# Case Summary Page
 
-The case page displays case details including the project and disease information, data files that are available for that case, and the experimental strategies employed. A button in the top-right corner of the page allows the user to add all files associated with the case to the file cart.
+The Case Summary Page displays case details including the project and disease information, data files that are available for that case, and the experimental strategies employed. A button in the top-right corner of the page allows the user to add all files associated with the case to the file cart.
 
 [![Case Page](images/gdc-case-entity-page.png)](images/gdc-case-entity-page.png "Click to see the full image.")
 
@@ -26,10 +26,10 @@ The case page will also display the most frequent mutations in the case.  It is 
 
 A table is displayed below that lists information about each mutation including:
 
-* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the Mutation Page
+* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the [Mutation Summary Page](MutationEntity.md)
 * __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference genome and tumor sample.  
 * __Type:__ A general classification of the mutation
-* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the Gene Page for the gene affected by the mutation is included
+* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the [Gene Summary Page](GeneEntity.md) for the gene affected by the mutation is included
 * __# Affected Cases in Project:__ The number of affected cases in the particular project
 * __# Affected Cases in GDC:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
 * __Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
