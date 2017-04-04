@@ -1657,8 +1657,3 @@ The table below describes the columns in a protected MAF and their definitions. 
     * "Inconclusive" if two alternative allele exists, and one matches while the other does not
     * "Unknown" if no validation sequence exists
 6. Column #120 __GDC_Valid_Somatic__ is TRUE if GDC_Validation_Status is "Valid" and the variant is "Somatic" in validation calls.  It is FALSE if these criteria are not met
-# GDC Visualization Suite
-
-This guide describes the new data visualization features that can be accessed at the GDC Data Portal. Visualization features include detailed descriptions of mutations, genes, and their frequency; graphical representation of mutation positions, and dynamic survival analysis plots. Additionally, new API endpoints are available for users to programmatically retrieve the data used to generate the visualization features.  
-
-The mutation-based visualization features are derived from open-access MAF files that were produced by GDC variant-calling pipelines. The format of these MAF files was developed by and for the GDC and is outlined in the [MAF Format](MAF_Format.md) documentation.
