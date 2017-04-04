@@ -24,7 +24,7 @@ A list with links that lead to external databases with additional information ab
 
 [![Cancer Distribution](images/GDC-Gene-CancerDist.png)](images/GDC-Gene-CancerDist.png "Click to see the full image.")
 
-A table is displayed that shows how many cases are affected by mutations within the gene as a ratio and percentage. Each row represents the number of cases for each project.
+A table and bar graph displayed that shows how many cases are affected by mutations within the gene as a ratio and percentage. Each row/bar represents the number of cases for each project.
 
 ## Protein Viewer
 

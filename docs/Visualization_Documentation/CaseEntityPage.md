@@ -6,7 +6,7 @@ The case page displays case details including the project and disease informatio
 
 ## Clinical and Biospecimen Information
 
-The page also provides clinical information about that case, and information about any biospecimens collected from the case. Links to export clinical and biospecimen information in JSON format are provided.
+The page also provides clinical and biospecimen information about that case. Links to export clinical and biospecimen information in JSON format are provided.
 
 [![Case Page, Clinical and Biospecimen](images/gdc-case-clinical-biospecimen.png)](images/gdc-case-clinical-biospecimen.png "Click to see the full image.")
 
@@ -14,7 +14,7 @@ For clinical records that support multiple records of the same type (Diagnoses, 
 
 ### Biospecimen Search
 
-A search filter just below the biospecimen section can be used to find and filter biospecimen samples taken.  The wildcard search will highlight entities in the tree that match the characters typed.  This will search both the case submitter ID, as well as the additional metadata for each entity.  For example, searching 'Primary Tumor' will highlight samples that match that criteria.
+A search filter just below the biospecimen section can be used to find and filter biospecimen data. The wildcard search will highlight entities in the tree that match the characters typed. This will search both the case submitter ID, as well as the additional metadata for each entity. For example, searching 'Primary Tumor' will highlight samples that match that type.
 
 [![Biospecimen Search](images/gdc-case-biospecimen-search.png)](images/gdc-case-biospecimen-search.png "Click to see the full image.")
 
