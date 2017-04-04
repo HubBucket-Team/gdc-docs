@@ -191,11 +191,9 @@ A search filter just below the biospecimen section can be used to find and filte
 
 ## Most Frequent Mutations
 
-The case page will also display the most frequent mutations in the case.  It is displayed as a bar graph that indicates the number of cases that share each mutation and in a tabular format below.  
+The case page will also display the most frequent mutations in the case.  It is displayed as a bar graph that shows the most frequent mutations across GDC that are carried by this case.
 
 [![Most Frequent Mutations](images/gdc-case-most-frequent-mutations.png)](images/gdc-case-most-frequent-mutations.png "Click to see the full image.")
-
-The top of this section contains a plot of the most frequently mutated genes and a survival plot of all the cases within the specified project.  Hovering over each bar in the plot will show information about the number of cases affected.
 
 A table is displayed below that lists information about each mutation including:
 

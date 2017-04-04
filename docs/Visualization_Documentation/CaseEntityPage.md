@@ -20,18 +20,16 @@ A search filter just below the biospecimen section can be used to find and filte
 
 ## Most Frequent Mutations
 
-The case page will also display the most frequent mutations in the case.  It is displayed as a bar graph that indicates the number of cases that share each mutation and in a tabular format below.  
+The case page will also display the most frequent mutations in the case.  It is displayed as a bar graph that shows the most frequent mutations across GDC that are carried by this case.
 
 [![Most Frequent Mutations](images/gdc-case-most-frequent-mutations.png)](images/gdc-case-most-frequent-mutations.png "Click to see the full image.")
 
-The top of this section contains a plot of the most frequently mutated genes and a survival plot of all the cases within the specified project.  Hovering over each bar in the plot will show information about the number of cases affected.
-
 A table is displayed below that lists information about each mutation including:
 
-* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the [Mutation Page](MutationEntity.md)
+* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the Mutation Page
 * __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference genome and tumor sample.  
 * __Type:__ A general classification of the mutation
-* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the [Gene Page](GeneEntity.md) for the gene affected by the mutation is included
+* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the Gene Page for the gene affected by the mutation is included
 * __# Affected Cases in Project:__ The number of affected cases in the particular project
 * __# Affected Cases in GDC:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
 * __Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
