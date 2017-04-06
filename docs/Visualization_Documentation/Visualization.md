@@ -26,7 +26,7 @@ The Genomic Data Commons can be queried by project or by primary site (i.e Brain
 
 # Project List Page
 
-The Project List page displays statistics about the projects that are available at the GDC.  
+The project list page displays statistics about the projects that are available at the GDC.  
 
 [![Project List Graphs](images/GDC-PL-Graphs.png)](images/GDC-PL-Graphs.png "Click to see the full image.")
 
@@ -36,7 +36,7 @@ This dynamically generated bar graph shows the ten genes with the most mutations
 
 Hovering the cursor over each bar will display information about the number of cases affected by the disease type and clicking on each bar will bring the user to the Gene Summary Page page for the gene associated with the mutation.
 
-## Cases Distribution per Project
+## Case Distribution per Project
 
 A pie graph displays the relative number of cases for each primary site (inner circle), which is further divided by project (outer circle). Hovering the cursor over each portion of the graph will display the primary site or project with the number of associated cases. Filtering projects at the left panel will update the pie chart.
 
@@ -66,9 +66,9 @@ The project detail page also reports the genes that have somatic mutations in th
 
 [![Frequently Mutated Genes](images/gdc-frequently-mutated-genes.png)](images/gdc-frequently-mutated-genes.png "Click to see the full image.")
 
-The top of this section also contains a survival plot of all the cases within the specified project. Hovering over each bar in the plot will display information about the number of cases affected. Users may choose to download the underlying data in JSON or TSV format or an image of the graph in SVG or PNG format by clicking the `download` icon at the top of each graph.
+The top of this section also contains a survival plot of all the cases within the specified project, in addition to a bar graph of the most frequently mutated genes. Hovering over each bar in the plot will display information about the number of cases affected. Users may choose to download the underlying data in JSON or TSV format or an image of the graph in SVG or PNG format by clicking the `download` icon at the top of each graph.
 
-Below these graphs is a tabular view of the genes affected which includes the following information:
+Below these graphs is a tabular view of the genes affected, which includes the following information:
 
 * __Symbol:__ The gene symbol, which links to the Gene Summary Page
 * __Name:__ Full name of the gene
@@ -123,7 +123,7 @@ The right side of the grid displays additional information about the genes:
 
 ### OncoGrid Options
 
-To facilitate readability and comparisons, drag-and-drop can be used to reorder the gene rows.  Double clicking a row in the "# Cases Affected" bar at the right side of the graphic will bring the user to the respective Gene Summary Page page. Hovering over a cell will display information about the mutation such as its ID, affected case, and biological consequence. Clicking on the cell will bring the user to the respective Mutation Summary page.  
+To facilitate readability and comparisons, drag-and-drop can be used to reorder the gene rows.  Double clicking a row in the "# Cases Affected" bar at the right side of the graphic will bring the user to the respective Gene Summary Page. Hovering over a cell will display information about the mutation such as its ID, affected case, and biological consequence. Clicking on the cell will bring the user to the respective Mutation Summary page.  
 
 A tool bar at the top right of the graphic allows the user to export the data as a JSON object, PNG image, or SVG image.  Seven buttons are available in this toolbar:
 
@@ -160,7 +160,7 @@ The final section of the project detail page is a display of the top 20 cases in
 
 [![Most Affected Cases](images/gdc-most-affected-cases.png)](images/gdc-most-affected-cases.png "Click to see the full image.")
 
-Below the bar graph, a table contains information about these cases:
+Below the bar graph is a table contains information about these cases:
 
 * __UUID:__ The UUID of the case, which links to the Case Summary Page
 * __Site:__  The anatomical location of the site affected
