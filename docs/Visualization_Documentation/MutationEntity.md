@@ -1,6 +1,6 @@
 # Mutation Summary Page
 
-The Mutation Summary Page contains information about a particular mutation and how it affects the associated gene. Each mutation is identified by its chromosomal position and nucleotide-level change.
+The Mutation Summary Page contains information about one somatic mutation and how it affects the associated gene. Each mutation is identified by its chromosomal position and nucleotide-level change.
 
 ## Summary
 
@@ -12,9 +12,9 @@ The Mutation Summary Page contains information about a particular mutation and h
 - __Reference Genome Assembly:__ The reference genome in which the chromosomal position refers to
 - __Allele in the Reference Assembly:__ The nucleotide(s) that compose the site in the reference assembly
 - __Functional Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
-  - __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.
-  - __MODERATE__: A non-disruptive variant that might change protein effectiveness.
-  - __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior.
+  - __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay
+  - __MODERATE__: A non-disruptive variant that might change protein effectiveness
+  - __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior
 
 ### External References
 
@@ -31,7 +31,7 @@ The consequences of the mutation are displayed in a table. The fields that detai
 * __Consequence:__ The biological consequence of each mutation
 * __Coding DNA Change:__ The specific nucleotide change and position of the mutation within the gene
 * __Strand:__ If the gene is located on the forward (+) or reverse (-) strand
-* __Transcript(s):__ The transcript(s) affected by the mutation. Each contains a link to the [Ensembl](https://www.ensembl.org) entry for the transcript.     
+* __Transcript(s):__ The transcript(s) affected by the mutation. Each contains a link to the [Ensembl](https://www.ensembl.org) entry for the transcript   
 
 ## Cancer Distribution
 
@@ -48,4 +48,6 @@ A bar graph detailing the number of cases affected by the mutation across all pr
 
 [![Mutation Protein Graph](images/GDC-Mutation-ProteinGraph.png)](images/GDC-Mutation-ProteinGraph.png "Click to see the full image.")
 
-The protein viewer displays a plot representing the position of mutations along the polypeptide chain associated with the mutation. The y-axis represents the number of cases that exhibit each mutation, whereas the x-axis represents the polypeptide chain. [Pfam domains](http://pfam.xfam.org/) that were identified along the polypeptide chain are identified with colored rectangles labeled with pfam IDs. See the [Gene Summary Page](GeneEntity.md#Protein-Plot) for additional details about the protein viewer.
+The protein viewer displays a plot representing the position of mutations along the polypeptide chain associated with the mutation. The y-axis represents the number of cases that exhibit each mutation, whereas the x-axis represents the polypeptide chain sequence. [Pfam domains](http://pfam.xfam.org/) that were identified along the polypeptide chain are identified with colored rectangles labeled with pfam IDs. See the Gene Summary Page for additional details about the protein viewer.
+
+---

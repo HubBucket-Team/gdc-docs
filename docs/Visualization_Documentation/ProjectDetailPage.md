@@ -1,14 +1,14 @@
 # Project Detail Page
 
-Each project has a detail page that provides an overview of all cases, files, and annotations available for the project. Clicking on the numbers in the summary table will display the corresponding data.
+Each project has a detail page that provides an overview of all available cases, files, and annotations available. Clicking on the numbers in the summary table will display the corresponding data.
 
-[![Project Entity Page](images/gdc-project-entity-page.png)](images/gdc-project-entity-page.png "Click to see the full image.")
+[![Project Detail Page](images/gdc-project-entity-page.png)](images/gdc-project-entity-page.png "Click to see the full image.")
 
 Three download buttons in the top right corner of the screen allow the user to download the entire project dataset, along with the associated project metadata:
 
-* __Download Manifest__: Download a manifest for all data files available in the project. The manifest can be used with the GDC Data Transfer Tool to download the files.
-* __Download Clinical__: Download clinical metadata about all cases in the project.
-* __Download Biospecimen__: Download all biospecimen metadata associated with all cases in the project.
+* __Download Manifest__: Downloads a manifest for all data files available in the project. The manifest can be used with the GDC Data Transfer Tool to download the files.
+* __Download Clinical__: Downloads clinical metadata about all cases in the project.
+* __Download Biospecimen__: Downloads biospecimen metadata associated with all cases in the project.
 
 ## Most Frequently Mutated Genes
 
@@ -16,21 +16,21 @@ The project detail page also reports the genes that have somatic mutations in th
 
 [![Frequently Mutated Genes](images/gdc-frequently-mutated-genes.png)](images/gdc-frequently-mutated-genes.png "Click to see the full image.")
 
-The top of this section contains a survival plot of all the cases within the specified project, in addition to a bar graph of the most frequently mutated genes. Hovering over each bar in the plot will display information about the number of cases affected. Users may choose to download the underlying data in JSON or TSV format or an image of the graph in SVG or PNG format by clicking the `download` icon at the top of each graph.
+The top of this section also contains a survival plot of all the cases within the specified project. Hovering over each bar in the plot will display information about the number of cases affected. Users may choose to download the underlying data in JSON or TSV format or an image of the graph in SVG or PNG format by clicking the `download` icon at the top of each graph.
 
-Below these graphs is a tabular view of the genes affected, which includes the following information:
+Below these graphs is a tabular view of the genes affected which includes the following information:
 
-* __Symbol:__ The gene symbol. When clicked, it links the [Gene Summary Page](GeneEntity.md)
+* __Symbol:__ The gene symbol, which links to the Gene Summary Page
 * __Name:__ Full name of the gene
 * __Cytoband:__ The location of the mutation on the chromosome in terms of Giemsa-stained samples.
-* __# Affected Cases in Project:__ The number of cases within the project that contain a mutation on this gene.
-* __# Affected Cases Across all Projects:__ The number of cases within all the projects in the GDC that contain a mutation on this gene.  Clicking the red arrow will display the cases broken down by project.
+* __# Affected Cases in Project:__ The number of cases within the project that contain a mutation on this gene
+* __# Affected Cases Across all Projects:__ The number of cases within all the projects in the GDC that contain a mutation on this gene.  Clicking the red arrow will display the cases broken down by project
 * __# Mutations:__ The number of SSMs (simple somatic mutations) detected in that gene
-* __Survival Analysis:__ An icon that, when clicked, will plot the survival rate between cases in the project with mutated and non-mutated forms of the gene.
+* __Survival Analysis:__ An icon that, when clicked, will plot the survival rate between cases in the project with mutated and non-mutated forms of the gene
 
 ### Survival Analysis
 
-Survival analysis is used to analyze the occurrence of event data over time.  In the GDC, survival analysis is performed on the mortality of the cases.  Survival analysis requires:
+Survival analysis is used to analyze the occurrence of event data over time.  In the GDC, survival analysis is performed on the mortality of the cases. Survival analysis requires:
 
 *  Data on the time to a particular event (days to death or last follow up)
     * Fields:  __diagnoses.days_to_death__ and __diagnoses.days_to_last_follow_up__
@@ -60,7 +60,7 @@ The calculated cumulated survival probability can be plotted against the interva
 
 ## OncoGrid
 
-The project detail page includes an OncoGrid plot of the cases with the most mutations, for the top 50 mutated genes affected by high impact mutations. Genes displayed on the left of the grid (Y-axis) correspond to individual patient cases on the bottom of the grid (X-axis).  
+The project detail page includes an OncoGrid plot of the cases with the most mutations, for the top 50 mutated genes affected by high impact mutations. Genes displayed on the left of the grid (Y-axis) correspond to individual cases on the bottom of the grid (X-axis).  
 
 [![Oncogrid](images/gdc-oncogrid.png)](images/gdc-oncogrid.png "Click to see the full image.")
 
@@ -73,7 +73,7 @@ The right side of the grid displays additional information about the genes:
 
 ### OncoGrid Options
 
-To facilitate readability and comparisons, drag-and-drop can be used to reorder the gene rows.  Double clicking a row in the "# Cases Affected" bar at the right side of the graphic will bring the user to the respective [Gene Summary Page](GeneEntity.md) page. Hovering over a cell will display information about the mutation such as its ID, affected case, and biological consequence. Clicking on the cell will bring the user to the respective [Mutation Summary Page](MutationEntity.md) page.  
+To facilitate readability and comparisons, drag-and-drop can be used to reorder the gene rows.  Double clicking a row in the "# Cases Affected" bar at the right side of the graphic will bring the user to the respective Gene Summary Page page. Hovering over a cell will display information about the mutation such as its ID, affected case, and biological consequence. Clicking on the cell will bring the user to the respective Mutation Summary page.  
 
 A tool bar at the top right of the graphic allows the user to export the data as a JSON object, PNG image, or SVG image.  Seven buttons are available in this toolbar:
 
@@ -86,24 +86,22 @@ A tool bar at the top right of the graphic allows the user to export the data as
 * __Fullscreen:__ Turns Fullscreen mode on/off
 
 ## Most Frequent Mutations
-The project detail page also displays the 20 most frequent mutations as a bar graph that indicates the number of cases that are affected by each mutation.  
+The project detail page also displays the 20 most frequent mutations in the project as a bar graph that indicates the number of cases that are affected by each mutation. Hovering over each bar in the plot will show information about the number of cases affected.
 
 [![Most Frequent Mutations](images/gdc-frequent-mutations.png)](images/gdc-frequent-mutations.png "Click to see the full image.")
 
-The top of this section also a survival plot of all the cases within the specified project.  Hovering over each bar in the plot will show information about the number of cases affected.
+A table is displayed below that lists information about each mutation:
 
-A table is displayed below that lists information about each mutation including:
-
-* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the [Mutation Summary Page](MutationEntity.md)
-* __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference genome and tumor sample.  
+* __ID:__ A UUID for the mutation assigned by the GDC, when clicked will bring a user to the Mutation Summary Page
+* __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference and tumor allele
 * __Type:__ A general classification of the mutation
-* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the [Gene Summary Page](GeneEntity.md) for the gene affected by the mutation is included
-* __# Affected Cases in Project:__ The number of affected cases in the particular project
-* __# Affected Cases in Across all Projects:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
+* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).  A link to the Gene Summary Page for the gene affected by the mutation is included
+* __# Affected Cases in Project:__ The number of affected cases in the project
+* __# Affected Cases in Across all Projects:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will display a breakdown of each affected project
 * __Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
-    * __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.
-    * __MODERATE__: A non-disruptive variant that might change protein effectiveness.
-    * __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior.
+    * __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function, or triggering nonsense mediated decay
+    * __MODERATE__: A non-disruptive variant that might change protein effectiveness
+    * __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior
 * __Survival Analysis:__ An icon that when clicked, will plot the survival rate between the gene's mutated and non-mutated cases
 
 ## Most Affected Cases
@@ -112,9 +110,9 @@ The final section of the project detail page is a display of the top 20 cases in
 
 [![Most Affected Cases](images/gdc-most-affected-cases.png)](images/gdc-most-affected-cases.png "Click to see the full image.")
 
-Below the bar graph is a table contains additional information about these cases.
+Below the bar graph, a table contains information about these cases:
 
-* __UUID:__ The UUID of the case, which directs the user to the [Case Summary Page](docs/Visualization_Documentation/CaseEntityPage.md)
+* __UUID:__ The UUID of the case, which links to the Case Summary Page
 * __Site:__  The anatomical location of the site affected
 * __Gender:__ Text designations that identify gender. Gender is described as the assemblage of properties that distinguish people on the basis of their societal roles
 * __Age at Diagnosis:__ Age at the time of diagnosis expressed in number of days since birth
@@ -123,3 +121,5 @@ Below the bar graph is a table contains additional information about these cases
 * __Last Follow Up:__ Time interval from the date of last follow up to the date of initial pathologic diagnosis, represented as a calculated number of days
 * __Available Files per Data Category:__ Five columns displaying the number of files available in each of the five data categories.  These link to the files for the specific case.
 * __Genes:__ The number of genes affected by mutations for the case
+
+---

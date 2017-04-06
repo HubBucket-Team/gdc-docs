@@ -14,7 +14,7 @@ The summary section of the gene page contains the following information:
 * __Type:__ A broad classification of the gene
 * __Location:__ The chromosome on which the gene is located and its coordinates
 * __Strand:__ If the gene is located on the forward (+) or reverse (-) strand
-* __Description:__ A description of gene function and downstream consequences of gene alteration.
+* __Description:__ A description of gene function and downstream consequences of gene alteration
 
 ## External References
 
@@ -32,7 +32,7 @@ A table and bar graph displayed that shows how many cases are affected by mutati
 
 Mutations and their frequency across cases are mapped to a graphical visualization of protein-coding regions with a lollipop plot. Pfam domains are highlighted along the x-axis to assign functionality to specific protein-coding regions. The bottom track represents a view of the full gene length. Different transcripts can be selected by using the drop-down menu above the plot.  
 
-The panel to the right of the plot allows the plot to be filtered by mutation consequence or impact.  The plot will dynamically change as filters are applied.  Mutation consequence and impact is denoted in the plot by color.
+The panel to the right of the plot allows the plot to be filtered by mutation consequences or impact.  The plot will dynamically change as filters are applied.  Mutation consequence and impact is denoted in the plot by color.
 
 The plot can be viewed at different zoom levels by clicking and dragging across the x-axis, clicking and dragging across the bottom track, or double clicking the pfam domain IDs. The `Reset` button can be used to bring the zoom level back to its original position. The plot can also be exported as a PNG image, SVG image or as JSON formatted text by choosing the `Download` button above the plot.
 
@@ -44,12 +44,14 @@ The 20 most frequent mutations in the gene are displayed as a bar graph that ind
 
 A table is displayed below that lists information about each mutation including:
 
-* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the [Mutation Summary Page](MutationEntity.md)
-* __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference genome and tumor sample.  
+* __ID:__ A UUID Code for the mutation assigned by the GDC, when clicked will bring a user to the Mutation Summary Page
+* __DNA Change:__ The chromosome and starting coordinates of the mutation are displayed along with the nucleotide differences between the reference and tumor allele
 * __Type:__ A general classification of the mutation
-* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript).
-* __# Affected Cases:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project.
+* __Consequences:__ The effects the mutation has on the gene coding for a protein (i.e. synonymous, missense, non-coding transcript)
+* __# Affected Cases:__ The number of affected cases, expressed as number across all projects. Choosing the arrow next to the percentage will expand the selection with a breakdown of each affected project
 * __Impact:__ A subjective classification of the severity of the variant consequence. The categories are:
-  - __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay.
-  - __MODERATE__: A non-disruptive variant that might change protein effectiveness.
-  - __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior.
+  - __HIGH__: The variant is assumed to have high (disruptive) impact in the protein, probably causing protein truncation, loss of function or triggering nonsense mediated decay
+  - __MODERATE__: A non-disruptive variant that might change protein effectiveness
+  - __LOW__: Assumed to be mostly harmless or unlikely to change protein behavior
+
+---
