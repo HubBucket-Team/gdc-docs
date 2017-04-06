@@ -12,8 +12,6 @@ The methods for retrieving information from these endpoint are very similar to t
 
 While it is not an endpoint, the `observation` entity is featured in the visualization section of the API. The `observation` entity provides information from the MAF file, such as read depth and normal genotype, that supports the validity of the associated `ssm`.  
 
-[![Viz Model](images/Viz_Model.png)](images/Viz_Model.png "Click to see the full image.")
-
 ## Endpoint Examples
 
 __Example 1:__ A user would like to access information about the gene `ZMPSTE24`, which has an Ensembl gene ID of `ENSG00000084073`.  This would be accomplished by appending `ENSG00000084073` (`gene_id`) to the `genes` endpoint.
