@@ -16,9 +16,9 @@ The project detail page also reports the genes that have somatic mutations in th
 
 [![Frequently Mutated Genes](images/gdc-frequently-mutated-genes.png)](images/gdc-frequently-mutated-genes.png "Click to see the full image.")
 
-The top of this section also contains a survival plot of all the cases within the specified project. Hovering over each bar in the plot will display information about the number of cases affected. Users may choose to download the underlying data in JSON or TSV format or an image of the graph in SVG or PNG format by clicking the `download` icon at the top of each graph.
+The top of this section contains a survival plot of all the cases within the specified project, in additiona to a bar graph of the most frequently mutated genes. Hovering over each bar in the plot will display information about the number of cases affected. Users may choose to download the underlying data in JSON or TSV format or an image of the graph in SVG or PNG format by clicking the `download` icon at the top of each graph.
 
-Below these graphs is a tabular view of the genes affected which includes the following information:
+Below these graphs is a tabular view of the genes affected, which includes the following information:
 
 * __Symbol:__ The gene symbol, which links to the Gene Summary Page
 * __Name:__ Full name of the gene
@@ -110,7 +110,7 @@ The final section of the project detail page is a display of the top 20 cases in
 
 [![Most Affected Cases](images/gdc-most-affected-cases.png)](images/gdc-most-affected-cases.png "Click to see the full image.")
 
-Below the bar graph, a table contains information about these cases:
+Below the bar graph is a table contains information about these cases:
 
 * __UUID:__ The UUID of the case, which links to the Case Summary Page
 * __Site:__  The anatomical location of the site affected
