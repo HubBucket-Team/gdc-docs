@@ -289,6 +289,8 @@ The consequences of the mutation are displayed in a table. The fields that detai
 * __Strand:__ If the gene is located on the forward (+) or reverse (-) strand
 * __Transcript(s):__ The transcript(s) affected by the mutation. Each contains a link to the [Ensembl](https://www.ensembl.org) entry for the transcript   
 
+---
+
 ## Cancer Distribution
 
 [![Mutation Distribution](images/GDC-Mutation-CancerDist.png)](images/GDC-Mutation-CancerDist.png "Click to see the full image.")
@@ -351,6 +353,10 @@ The GDC MAF file format is based on the [TCGA Mutation Annotation Format](https:
 
 __Note:__ The criteria for allowing mutations into open-access are purposefully implemented to overcompensate and filter out germline variants. If omission of true-positive somatic mutations is a concern, the GDC recommends using protected MAFs.  
 
+---
+---
+---
+---
 ---
 
 ## Somatic MAF File Generation
