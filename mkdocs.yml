@@ -74,13 +74,14 @@ pages:
   - "Release Notes": 'Data/Release_Notes/Data_Release_Notes.md'
   - fa-file-text Download PDF /Data/PDF/Data_UG.pdf: 'Data/PDF/index.md'
 - VIZ:
-  - Home Page: 'Visualization_Documentation/Home Page.md'
+  - Home Page: 'Visualization_Documentation/Home_Page.md'
   - Project List: 'Visualization_Documentation/ProjectListPage.md'
   - Project Detail: 'Visualization_Documentation/ProjectDetailPage.md'
   - Case Entity: 'Visualization_Documentation/CaseEntityPage.md'
   - Gene Entity: 'Visualization_Documentation/GeneEntity.md'
   - Mutation Entity: 'Visualization_Documentation/MutationEntity.md'
   - API Endpoints: 'Visualization_Documentation/API_Endpoints.md'
+  - Release Notes: 'Visualization_Documentation/DAVE_Release_Notes.md'
 extra:
   project_root_dir: '/'
   project_org: 'GDC'
