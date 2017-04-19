@@ -22,3 +22,4 @@
 * Mutation data is only available for TCGA projects
 * The number of cases displayed/visible on the portal is less than what is in the downloadable MAF files <!--SV-624-->
 * Cancer Distribution Plot displays incorrect static title <!--SV-614-->
+* The search box on the homepage does not allow searches for project, primary site, disease types, case ID, or file ID. It only allows searches for genes or mutation IDs
