@@ -658,97 +658,407 @@ curl "https://gdc-api-staging.datacommons.io/analysis/mutated_cases_count_by_pro
 {
   "hits": {
     "hits": [],
-    "total": 1955,
+    "total": 14551,
     "max_score": 0.0
   },
   "_shards": {
-    "successful": 10,
+    "successful": 8,
     "failed": 0,
-    "total": 10
+    "total": 8
   },
-  "took": 4,
+  "took": 138,
   "aggregations": {
     "projects": {
       "buckets": [
         {
           "case_summary": {
             "case_with_ssm": {
-              "doc_count": 504
+              "doc_count": 216
             },
-            "doc_count": 3526
+            "doc_count": 637
+          },
+          "key": "TARGET-NBL",
+          "doc_count": 1127
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 1044
+            },
+            "doc_count": 7625
+          },
+          "key": "TCGA-BRCA",
+          "doc_count": 1098
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 8
+            },
+            "doc_count": 579
+          },
+          "key": "TARGET-AML",
+          "doc_count": 988
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 34
+            },
+            "doc_count": 290
+          },
+          "key": "TARGET-WT",
+          "doc_count": 652
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 396
+            },
+            "doc_count": 3197
+          },
+          "key": "TCGA-GBM",
+          "doc_count": 617
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 443
+            },
+            "doc_count": 3880
+          },
+          "key": "TCGA-OV",
+          "doc_count": 608
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 569
+            },
+            "doc_count": 3874
+          },
+          "key": "TCGA-LUAD",
+          "doc_count": 585
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 542
+            },
+            "doc_count": 3874
+          },
+          "key": "TCGA-UCEC",
+          "doc_count": 560
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 339
+            },
+            "doc_count": 3547
+          },
+          "key": "TCGA-KIRC",
+          "doc_count": 537
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 510
+            },
+            "doc_count": 3671
+          },
+          "key": "TCGA-HNSC",
+          "doc_count": 528
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 513
+            },
+            "doc_count": 3606
           },
           "key": "TCGA-LGG",
+          "doc_count": 516
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 496
+            },
+            "doc_count": 3536
+          },
+          "key": "TCGA-THCA",
+          "doc_count": 507
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 497
+            },
+            "doc_count": 3520
+          },
+          "key": "TCGA-LUSC",
           "doc_count": 504
         },
         {
           "case_summary": {
             "case_with_ssm": {
-              "doc_count": 389
+              "doc_count": 498
             },
-            "doc_count": 2428
+            "doc_count": 3490
           },
-          "key": "TCGA-GBM",
-          "doc_count": 389
+          "key": "TCGA-PRAD",
+          "doc_count": 500
         },
         {
           "case_summary": {
             "case_with_ssm": {
-              "doc_count": 336
+              "doc_count": 470
             },
-            "doc_count": 2351
+            "doc_count": 3289
           },
-          "key": "TCGA-KIRC",
-          "doc_count": 336
+          "key": "TCGA-SKCM",
+          "doc_count": 470
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 433
+            },
+            "doc_count": 3188
+          },
+          "key": "TCGA-COAD",
+          "doc_count": 461
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 441
+            },
+            "doc_count": 3095
+          },
+          "key": "TCGA-STAD",
+          "doc_count": 443
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 412
+            },
+            "doc_count": 2884
+          },
+          "key": "TCGA-BLCA",
+          "doc_count": 412
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 0
+            },
+            "doc_count": 0
+          },
+          "key": "TARGET-OS",
+          "doc_count": 381
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 375
+            },
+            "doc_count": 2635
+          },
+          "key": "TCGA-LIHC",
+          "doc_count": 377
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 305
+            },
+            "doc_count": 2142
+          },
+          "key": "TCGA-CESC",
+          "doc_count": 307
         },
         {
           "case_summary": {
             "case_with_ssm": {
               "doc_count": 288
             },
-            "doc_count": 2015
+            "doc_count": 2033
           },
           "key": "TCGA-KIRP",
-          "doc_count": 288
+          "doc_count": 291
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 255
+            },
+            "doc_count": 1821
+          },
+          "key": "TCGA-SARC",
+          "doc_count": 261
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 149
+            },
+            "doc_count": 1192
+          },
+          "key": "TCGA-LAML",
+          "doc_count": 200
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 184
+            },
+            "doc_count": 1293
+          },
+          "key": "TCGA-ESCA",
+          "doc_count": 185
         },
         {
           "case_summary": {
             "case_with_ssm": {
               "doc_count": 183
             },
-            "doc_count": 1280
+            "doc_count": 1285
           },
-          "key": "TCGA-ESCA",
-          "doc_count": 183
+          "key": "TCGA-PAAD",
+          "doc_count": 185
         },
         {
           "case_summary": {
             "case_with_ssm": {
-              "doc_count": 141
+              "doc_count": 179
             },
-            "doc_count": 858
+            "doc_count": 1253
           },
-          "key": "TCGA-LAML",
-          "doc_count": 141
+          "key": "TCGA-PCPG",
+          "doc_count": 179
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 158
+            },
+            "doc_count": 1169
+          },
+          "key": "TCGA-READ",
+          "doc_count": 172
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 150
+            },
+            "doc_count": 1018
+          },
+          "key": "TCGA-TGCT",
+          "doc_count": 150
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 123
+            },
+            "doc_count": 867
+          },
+          "key": "TCGA-THYM",
+          "doc_count": 124
         },
         {
           "case_summary": {
             "case_with_ssm": {
               "doc_count": 66
             },
-            "doc_count": 462
+            "doc_count": 556
           },
           "key": "TCGA-KICH",
-          "doc_count": 66
+          "doc_count": 113
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 92
+            },
+            "doc_count": 620
+          },
+          "key": "TCGA-ACC",
+          "doc_count": 92
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 83
+            },
+            "doc_count": 605
+          },
+          "key": "TCGA-MESO",
+          "doc_count": 87
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 80
+            },
+            "doc_count": 560
+          },
+          "key": "TCGA-UVM",
+          "doc_count": 80
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 0
+            },
+            "doc_count": 163
+          },
+          "key": "TARGET-RT",
+          "doc_count": 75
         },
         {
           "case_summary": {
             "case_with_ssm": {
               "doc_count": 48
             },
-            "doc_count": 336
+            "doc_count": 346
           },
           "key": "TCGA-DLBC",
-          "doc_count": 48
+          "doc_count": 58
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 57
+            },
+            "doc_count": 399
+          },
+          "key": "TCGA-UCS",
+          "doc_count": 57
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 51
+            },
+            "doc_count": 306
+          },
+          "key": "TCGA-CHOL",
+          "doc_count": 51
+        },
+        {
+          "case_summary": {
+            "case_with_ssm": {
+              "doc_count": 0
+            },
+            "doc_count": 13
+          },
+          "key": "TARGET-CCSK",
+          "doc_count": 13
         }
       ],
       "sum_other_doc_count": 0,
